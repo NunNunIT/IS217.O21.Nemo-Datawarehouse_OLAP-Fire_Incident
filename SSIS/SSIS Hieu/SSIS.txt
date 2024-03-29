@@ -1,0 +1,87 @@
+SSIS
+
+- Property Use
+
+property_id			(DT_STR, 4, 1252)TOKEN([Property Use]," ",1)
+property_desc			SUBSTRING([Property Use],FINDSTRING([Property Use]," ",1) + 1,LEN([Property Use]) - FINDSTRING([Property Use]," ",1))
+
+CREATE TABLE [dim_property] (
+    [property_id] varchar(4) primary key,
+    [property_desc] nvarchar(50)
+)
+
+
+- Structure
+
+structure_id			(DT_STR, 4, 1252)TOKEN( [Structure Type]  ," ",1)
+structure_desc			SUBSTRING([Structure Type],FINDSTRING([Structure Type]," ",1) + 1,LEN([Structure Type]) - FINDSTRING([Structure Type]," ",1))
+
+CREATE TABLE [dim_structure] (
+    [structure_id] nvarchar(4) primary key,
+    [structure_desc] nvarchar(50)
+)
+
+
+- Heat Source
+
+heat_source_id			(DT_STR, 4, 1252)TOKEN( [Heat Source]  ," ",1)
+heat_source_desc		SUBSTRING([Heat Source],FINDSTRING([Heat Source]," ",1) + 1,LEN([Heat Source]) - FINDSTRING([Heat Source]," ",1))
+
+CREATE TABLE [dim_heat_source] (
+    [heat_source_id] nvarchar(4) primary key,
+    [heat_source_desc] nvarchar(50)
+)
+
+
+- Ignition Factor
+
+ignition_factor_id		(DT_STR, 4, 1252)TOKEN( [Ignition Factor]  ," ",1)
+ignition_factor_desc		SUBSTRING([Ignition Factor],FINDSTRING([Ignition Factor]," ",1) + 1,LEN([Ignition Factor]) - FINDSTRING([Ignition Factor]," ",1))
+
+CREATE TABLE [dim_ignition_factor] (
+    [ignition_factor_id] char(4) primary key,
+    [ignition_factor_desc] nvarchar(47)
+)
+
+
+- Ignition Cause
+
+ignition_cause_id		(DT_STR, 4, 1252)TOKEN( [Ignition Cause]  ," ",1)
+ignition_cause_desc		SUBSTRING([Ignition Cause],FINDSTRING([Ignition Cause]," ",1) + 1,LEN([Ignition Cause]) - FINDSTRING([Ignition Cause]," ",1))
+
+CREATE TABLE [dim_ignition_cause] (
+    [ignition_cause_id] nvarchar(4) primary key,
+    [ignition_cause_desc] nvarchar(50)
+)
+
+
+- Action
+
+action_id			(DT_STR, 4, 1252)TOKEN([Action Taken Primary], " ", 1)
+action_desc 			SUBSTRING([Action Taken Primary],FINDSTRING([Action Taken Primary]," ",1) + 1,LEN([Action Taken Primary]) - FINDSTRING([Action Taken Primary]," ",1))
+
+CREATE TABLE [dim_action] (
+    [action_id] nvarchar(4) primary key,
+    [action_desc] nvarchar(50)
+)
+
+
+- Station
+
+CREATE TABLE [dim_station] (
+    [station_id]		INT IDENTITY(1, 1) PRIMARY KEY
+    [Station Area] 		varchar(50),
+    [Battalion] 		varchar(50)
+)
+
+
+- Situation
+
+primary_situation_id		(DT_STR, 4, 1252)TOKEN([Primary Situation]," ",1)
+primary_situation_desc		SUBSTRING([Primary Situation],FINDSTRING([Primary Situation]," ",1) + 1,LEN([Primary Situation]) - FINDSTRING([Primary Situation]," ",1))
+
+CREATE TABLE [dim_situation] (
+    [situation_id] nvarchar(4) primary key,
+    [situation_desc] nvarchar(50)
+)
+
