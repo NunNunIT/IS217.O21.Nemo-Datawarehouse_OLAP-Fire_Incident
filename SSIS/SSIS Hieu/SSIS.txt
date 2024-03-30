@@ -1,5 +1,12 @@
 SSIS
 
+setup input .csv 
+Primary Situation	->	100
+Action Taken Primary	->	100
+Property Use		->	100
+Iginition Cause		->	100
+Heat Source		->	100
+
 - Property Use
 
 property_id			(DT_STR, 4, 1252)TOKEN([Property Use]," ",1)
@@ -38,9 +45,9 @@ CREATE TABLE [dim_heat_source] (
 ignition_factor_id		(DT_STR, 4, 1252)TOKEN( [Ignition Factor]  ," ",1)
 ignition_factor_desc		SUBSTRING([Ignition Factor],FINDSTRING([Ignition Factor]," ",1) + 1,LEN([Ignition Factor]) - FINDSTRING([Ignition Factor]," ",1))
 
-CREATE TABLE [dim_ignition_factor] (
-    [ignition_factor_id] char(4) primary key,
-    [ignition_factor_desc] nvarchar(47)
+CREATE TABLE [dim_iginition_factor] (
+    [ignition_factor_id] varchar(4) primary key,
+    [ignition_factor_desc] nvarchar(54)
 )
 
 
