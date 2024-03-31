@@ -13,162 +13,162 @@ isWeekend
 isLeapYear
 
 /* -----------------------------------------------------------------*/
-/** Incident Date **/
+/** Incident_Date **/
 
 -- Day_Of_Week
-DATEPART("dw",[Incident Date])
+DATEPART("dw",[Incident_Date])
 
 -- Day_Name
-DATEPART("dw", [Incident Date]) == 1 ? "Monday" : DATEPART("dw", [Incident Date]) == 2 ? "Tuesday" : DATEPART("dw", [Incident Date]) == 3 ? "Wednesday" : DATEPART("dw", [Incident Date]) == 4 ? "Thursday" : DATEPART("dw", [Incident Date]) == 5 ? "Friday" : DATEPART("dw", [Incident Date]) == 6 ? "Saturday" : DATEPART("dw", [Incident Date]) == 7 ? "Sunday": "Invalid Day"
+DATEPART("dw", [Incident_Date]) == 1 ? "Monday" : DATEPART("dw", [Incident_Date]) == 2 ? "Tuesday" : DATEPART("dw", [Incident_Date]) == 3 ? "Wednesday" : DATEPART("dw", [Incident_Date]) == 4 ? "Thursday" : DATEPART("dw", [Incident_Date]) == 5 ? "Friday" : DATEPART("dw", [Incident_Date]) == 6 ? "Saturday" : DATEPART("dw", [Incident_Date]) == 7 ? "Sunday": "Invalid Day"
 
 -- Day_Of_Month
-DAY([Incident Date])
+DAY([Incident_Date])
 
 -- Day_Of_Year
-DATEPART("y",[Incident Date])
+DATEPART("y",[Incident_Date])
 
 -- Month_Of_Year
-MONTH( [Incident Date] )
+MONTH( [Incident_Date] )
 
 -- Month_Name
-MONTH([Incident Date]) == 1 ? "Jan" : MONTH([Incident Date]) == 2 ? "Feb" : MONTH([Incident Date]) == 3 ? "Mar" : MONTH([Incident Date]) == 4 ? "Apr" : MONTH([Incident Date]) == 5 ? "May" : MONTH([Incident Date]) == 6 ? "Jun" : MONTH([Incident Date]) == 7 ? "Jul" : MONTH([Incident Date]) == 8 ? "Aug" : MONTH([Incident Date]) == 9 ? "Sep" : MONTH([Incident Date]) == 10 ? "Oct" : MONTH([Incident Date]) == 11 ? "Nov" : MONTH([Incident Date]) == 12 ? "Dec" : "Invalid Month"
+MONTH([Incident_Date]) == 1 ? "Jan" : MONTH([Incident_Date]) == 2 ? "Feb" : MONTH([Incident_Date]) == 3 ? "Mar" : MONTH([Incident_Date]) == 4 ? "Apr" : MONTH([Incident_Date]) == 5 ? "May" : MONTH([Incident_Date]) == 6 ? "Jun" : MONTH([Incident_Date]) == 7 ? "Jul" : MONTH([Incident_Date]) == 8 ? "Aug" : MONTH([Incident_Date]) == 9 ? "Sep" : MONTH([Incident_Date]) == 10 ? "Oct" : MONTH([Incident_Date]) == 11 ? "Nov" : MONTH([Incident_Date]) == 12 ? "Dec" : "Invalid Month"
 
 -- Year
-YEAR( [Incident Date] )
+YEAR( [Incident_Date] )
 
 -- Week_Of_Year
-DATEPART("wk",[Incident Date])
+DATEPART("wk",[Incident_Date])
 
 -- Quarter
-DATEPART("q", [Incident Date])
+DATEPART("q", [Incident_Date])
 
 -- Quarter_Name
-DATEPART("q", [Incident Date]) == 1 ? "Q1" : DATEPART("q", [Incident Date]) == 2 ? "Q2" : DATEPART("q", [Incident Date]) == 3 ? "Q3" : DATEPART("q", [Incident Date]) == 4 ? "Q4" : "Invalid Quarter"
+DATEPART("q", [Incident_Date]) == 1 ? "Q1" : DATEPART("q", [Incident_Date]) == 2 ? "Q2" : DATEPART("q", [Incident_Date]) == 3 ? "Q3" : DATEPART("q", [Incident_Date]) == 4 ? "Q4" : "Invalid Quarter"
 
 -- isWeekend
-DATEPART("dw", [Incident Date]) == 6 || DATEPART("dw", [Incident Date]) == 7 ? 1 : 0
+DATEPART("dw", [Incident_Date]) == 6 || DATEPART("dw", [Incident_Date]) == 7 ? 1 : 0
 
 -- isLeapYear 
-YEAR([Incident Date]) % 4 == 0
+YEAR([Incident_Date]) % 4 == 0
 
 
 /* -----------------------------------------------------------------*/
-/** Alarm DtTm **/
+/** Alarm_DtTm **/
 
 -- Day_Of_Week
-DATEPART("dw",[Alarm DtTm])
+DATEPART("dw",[Alarm_DtTm])
 
 -- Day_Name
-DATEPART("dw", [Alarm DtTm]) == 1 ? "Monday" : DATEPART("dw", [Alarm DtTm]) == 2 ? "Tuesday" : DATEPART("dw", [Alarm DtTm]) == 3 ? "Wednesday" : DATEPART("dw", [Alarm DtTm]) == 4 ? "Thursday" : DATEPART("dw", [Alarm DtTm]) == 5 ? "Friday" : DATEPART("dw", [Alarm DtTm]) == 6 ? "Saturday" : DATEPART("dw", [Alarm DtTm]) == 7 ? "Sunday": "Invalid Day"
+DATEPART("dw", [Alarm_DtTm]) == 1 ? "Monday" : DATEPART("dw", [Alarm_DtTm]) == 2 ? "Tuesday" : DATEPART("dw", [Alarm_DtTm]) == 3 ? "Wednesday" : DATEPART("dw", [Alarm_DtTm]) == 4 ? "Thursday" : DATEPART("dw", [Alarm_DtTm]) == 5 ? "Friday" : DATEPART("dw", [Alarm_DtTm]) == 6 ? "Saturday" : DATEPART("dw", [Alarm_DtTm]) == 7 ? "Sunday": "Invalid Day"
 
 -- Day_Of_Month
-DAY([Alarm DtTm])
+DAY([Alarm_DtTm])
 
 -- Day_Of_Year
-DATEPART("y",[Alarm DtTm])
+DATEPART("y",[Alarm_DtTm])
 
 -- Month_Of_Year
-MONTH( [Alarm DtTm] )
+MONTH( [Alarm_DtTm] )
 
 -- Month_Name
-MONTH([Alarm DtTm]) == 1 ? "Jan" : MONTH([Alarm DtTm]) == 2 ? "Feb" : MONTH([Alarm DtTm]) == 3 ? "Mar" : MONTH([Alarm DtTm]) == 4 ? "Apr" : MONTH([Alarm DtTm]) == 5 ? "May" : MONTH([Alarm DtTm]) == 6 ? "Jun" : MONTH([Alarm DtTm]) == 7 ? "Jul" : MONTH([Alarm DtTm]) == 8 ? "Aug" : MONTH([Alarm DtTm]) == 9 ? "Sep" : MONTH([Alarm DtTm]) == 10 ? "Oct" : MONTH([Alarm DtTm]) == 11 ? "Nov" : MONTH([Alarm DtTm]) == 12 ? "Dec" : "Invalid Month"
+MONTH([Alarm_DtTm]) == 1 ? "Jan" : MONTH([Alarm_DtTm]) == 2 ? "Feb" : MONTH([Alarm_DtTm]) == 3 ? "Mar" : MONTH([Alarm_DtTm]) == 4 ? "Apr" : MONTH([Alarm_DtTm]) == 5 ? "May" : MONTH([Alarm_DtTm]) == 6 ? "Jun" : MONTH([Alarm_DtTm]) == 7 ? "Jul" : MONTH([Alarm_DtTm]) == 8 ? "Aug" : MONTH([Alarm_DtTm]) == 9 ? "Sep" : MONTH([Alarm_DtTm]) == 10 ? "Oct" : MONTH([Alarm_DtTm]) == 11 ? "Nov" : MONTH([Alarm_DtTm]) == 12 ? "Dec" : "Invalid Month"
 
 -- Year
-YEAR( [Alarm DtTm] )
+YEAR( [Alarm_DtTm] )
 
 -- Week_Of_Year
-DATEPART("wk",[Alarm DtTm])
+DATEPART("wk",[Alarm_DtTm])
 
 -- Quarter
-DATEPART("q", [Alarm DtTm])
+DATEPART("q", [Alarm_DtTm])
 
 -- Quarter_Name
-DATEPART("q", [Alarm DtTm]) == 1 ? "Q1" : DATEPART("q", [Alarm DtTm]) == 2 ? "Q2" : DATEPART("q", [Alarm DtTm]) == 3 ? "Q3" : DATEPART("q", [Alarm DtTm]) == 4 ? "Q4" : "Invalid Quarter"
+DATEPART("q", [Alarm_DtTm]) == 1 ? "Q1" : DATEPART("q", [Alarm_DtTm]) == 2 ? "Q2" : DATEPART("q", [Alarm_DtTm]) == 3 ? "Q3" : DATEPART("q", [Alarm_DtTm]) == 4 ? "Q4" : "Invalid Quarter"
 
 -- isWeekend
-DATEPART("dw", [Alarm DtTm]) == 6 || DATEPART("dw", [Alarm DtTm]) == 7 ? 1 : 0
+DATEPART("dw", [Alarm_DtTm]) == 6 || DATEPART("dw", [Alarm_DtTm]) == 7 ? 1 : 0
 
 -- isLeapYear 
-YEAR([Alarm DtTm]) % 4 == 0
+YEAR([Alarm_DtTm]) % 4 == 0
 
 /* -----------------------------------------------------------------*/
-/** Arrival DtTm **/
+/** Arrival_DtTm **/
 
 -- Day_Of_Week
-DATEPART("dw",[Arrival DtTm])
+DATEPART("dw",[Arrival_DtTm])
 
 -- Day_Name
-DATEPART("dw", [Arrival DtTm]) == 1 ? "Monday" : DATEPART("dw", [Arrival DtTm]) == 2 ? "Tuesday" : DATEPART("dw", [Arrival DtTm]) == 3 ? "Wednesday" : DATEPART("dw", [Arrival DtTm]) == 4 ? "Thursday" : DATEPART("dw", [Arrival DtTm]) == 5 ? "Friday" : DATEPART("dw", [Arrival DtTm]) == 6 ? "Saturday" : DATEPART("dw", [Arrival DtTm]) == 7 ? "Sunday": "Invalid Day"
+DATEPART("dw", [Arrival_DtTm]) == 1 ? "Monday" : DATEPART("dw", [Arrival_DtTm]) == 2 ? "Tuesday" : DATEPART("dw", [Arrival_DtTm]) == 3 ? "Wednesday" : DATEPART("dw", [Arrival_DtTm]) == 4 ? "Thursday" : DATEPART("dw", [Arrival_DtTm]) == 5 ? "Friday" : DATEPART("dw", [Arrival_DtTm]) == 6 ? "Saturday" : DATEPART("dw", [Arrival_DtTm]) == 7 ? "Sunday": "Invalid Day"
 
 -- Day_Of_Month
-DAY([Arrival DtTm])
+DAY([Arrival_DtTm])
 
 -- Day_Of_Year
-DATEPART("y",[Arrival DtTm])
+DATEPART("y",[Arrival_DtTm])
 
 -- Month_Of_Year
-MONTH( [Arrival DtTm] )
+MONTH( [Arrival_DtTm] )
 
 -- Month_Name
-MONTH([Arrival DtTm]) == 1 ? "Jan" : MONTH([Arrival DtTm]) == 2 ? "Feb" : MONTH([Arrival DtTm]) == 3 ? "Mar" : MONTH([Arrival DtTm]) == 4 ? "Apr" : MONTH([Arrival DtTm]) == 5 ? "May" : MONTH([Arrival DtTm]) == 6 ? "Jun" : MONTH([Arrival DtTm]) == 7 ? "Jul" : MONTH([Arrival DtTm]) == 8 ? "Aug" : MONTH([Arrival DtTm]) == 9 ? "Sep" : MONTH([Arrival DtTm]) == 10 ? "Oct" : MONTH([Arrival DtTm]) == 11 ? "Nov" : MONTH([Arrival DtTm]) == 12 ? "Dec" : "Invalid Month"
+MONTH([Arrival_DtTm]) == 1 ? "Jan" : MONTH([Arrival_DtTm]) == 2 ? "Feb" : MONTH([Arrival_DtTm]) == 3 ? "Mar" : MONTH([Arrival_DtTm]) == 4 ? "Apr" : MONTH([Arrival_DtTm]) == 5 ? "May" : MONTH([Arrival_DtTm]) == 6 ? "Jun" : MONTH([Arrival_DtTm]) == 7 ? "Jul" : MONTH([Arrival_DtTm]) == 8 ? "Aug" : MONTH([Arrival_DtTm]) == 9 ? "Sep" : MONTH([Arrival_DtTm]) == 10 ? "Oct" : MONTH([Arrival_DtTm]) == 11 ? "Nov" : MONTH([Arrival_DtTm]) == 12 ? "Dec" : "Invalid Month"
 
 -- Year
-YEAR( [Arrival DtTm] )
+YEAR( [Arrival_DtTm] )
 
 -- Week_Of_Year
-DATEPART("wk",[Arrival DtTm])
+DATEPART("wk",[Arrival_DtTm])
 
 -- Quarter
-DATEPART("q", [Arrival DtTm])
+DATEPART("q", [Arrival_DtTm])
 
 -- Quarter_Name
-DATEPART("q", [Arrival DtTm]) == 1 ? "Q1" : DATEPART("q", [Arrival DtTm]) == 2 ? "Q2" : DATEPART("q", [Arrival DtTm]) == 3 ? "Q3" : DATEPART("q", [Arrival DtTm]) == 4 ? "Q4" : "Invalid Quarter"
+DATEPART("q", [Arrival_DtTm]) == 1 ? "Q1" : DATEPART("q", [Arrival_DtTm]) == 2 ? "Q2" : DATEPART("q", [Arrival_DtTm]) == 3 ? "Q3" : DATEPART("q", [Arrival_DtTm]) == 4 ? "Q4" : "Invalid Quarter"
 
 -- isWeekend
-DATEPART("dw", [Arrival DtTm]) == 6 || DATEPART("dw", [Arrival DtTm]) == 7 ? 1 : 0
+DATEPART("dw", [Arrival_DtTm]) == 6 || DATEPART("dw", [Arrival_DtTm]) == 7 ? 1 : 0
 
 -- isLeapYear 
-YEAR([Arrival DtTm]) % 4 == 0
+YEAR([Arrival_DtTm]) % 4 == 0
 
 
 /* -----------------------------------------------------------------*/
-/** Close DtTm **/
+/** Close_DtTm **/
 
 -- Day_Of_Week
-DATEPART("dw",[Close DtTm])
+DATEPART("dw",[Close_DtTm])
 
 -- Day_Name
-DATEPART("dw", [Close DtTm]) == 1 ? "Monday" : DATEPART("dw", [Close DtTm]) == 2 ? "Tuesday" : DATEPART("dw", [Close DtTm]) == 3 ? "Wednesday" : DATEPART("dw", [Close DtTm]) == 4 ? "Thursday" : DATEPART("dw", [Close DtTm]) == 5 ? "Friday" : DATEPART("dw", [Close DtTm]) == 6 ? "Saturday" : DATEPART("dw", [Close DtTm]) == 7 ? "Sunday": "Invalid Day"
+DATEPART("dw", [Close_DtTm]) == 1 ? "Monday" : DATEPART("dw", [Close_DtTm]) == 2 ? "Tuesday" : DATEPART("dw", [Close_DtTm]) == 3 ? "Wednesday" : DATEPART("dw", [Close_DtTm]) == 4 ? "Thursday" : DATEPART("dw", [Close_DtTm]) == 5 ? "Friday" : DATEPART("dw", [Close_DtTm]) == 6 ? "Saturday" : DATEPART("dw", [Close_DtTm]) == 7 ? "Sunday": "Invalid Day"
 
 -- Day_Of_Month
-DAY([Close DtTm])
+DAY([Close_DtTm])
 
 -- Day_Of_Year
-DATEPART("y",[Close DtTm])
+DATEPART("y",[Close_DtTm])
 
 -- Month_Of_Year
-MONTH( [Close DtTm] )
+MONTH( [Close_DtTm] )
 
 -- Month_Name
-MONTH([Close DtTm]) == 1 ? "Jan" : MONTH([Close DtTm]) == 2 ? "Feb" : MONTH([Close DtTm]) == 3 ? "Mar" : MONTH([Close DtTm]) == 4 ? "Apr" : MONTH([Close DtTm]) == 5 ? "May" : MONTH([Close DtTm]) == 6 ? "Jun" : MONTH([Close DtTm]) == 7 ? "Jul" : MONTH([Close DtTm]) == 8 ? "Aug" : MONTH([Close DtTm]) == 9 ? "Sep" : MONTH([Close DtTm]) == 10 ? "Oct" : MONTH([Close DtTm]) == 11 ? "Nov" : MONTH([Close DtTm]) == 12 ? "Dec" : "Invalid Month"
+MONTH([Close_DtTm]) == 1 ? "Jan" : MONTH([Close_DtTm]) == 2 ? "Feb" : MONTH([Close_DtTm]) == 3 ? "Mar" : MONTH([Close_DtTm]) == 4 ? "Apr" : MONTH([Close_DtTm]) == 5 ? "May" : MONTH([Close_DtTm]) == 6 ? "Jun" : MONTH([Close_DtTm]) == 7 ? "Jul" : MONTH([Close_DtTm]) == 8 ? "Aug" : MONTH([Close_DtTm]) == 9 ? "Sep" : MONTH([Close_DtTm]) == 10 ? "Oct" : MONTH([Close_DtTm]) == 11 ? "Nov" : MONTH([Close_DtTm]) == 12 ? "Dec" : "Invalid Month"
 
 -- Year
-YEAR( [Close DtTm] )
+YEAR( [Close_DtTm] )
 
 -- Week_Of_Year
-DATEPART("wk",[Close DtTm])
+DATEPART("wk",[Close_DtTm])
 
 -- Quarter
-DATEPART("q", [Close DtTm])
+DATEPART("q", [Close_DtTm])
 
 -- Quarter_Name
-DATEPART("q", [Close DtTm]) == 1 ? "Q1" : DATEPART("q", [Close DtTm]) == 2 ? "Q2" : DATEPART("q", [Close DtTm]) == 3 ? "Q3" : DATEPART("q", [Close DtTm]) == 4 ? "Q4" : "Invalid Quarter"
+DATEPART("q", [Close_DtTm]) == 1 ? "Q1" : DATEPART("q", [Close_DtTm]) == 2 ? "Q2" : DATEPART("q", [Close_DtTm]) == 3 ? "Q3" : DATEPART("q", [Close_DtTm]) == 4 ? "Q4" : "Invalid Quarter"
 
 -- isWeekend
-DATEPART("dw", [Close DtTm]) == 6 || DATEPART("dw", [Close DtTm]) == 7 ? 1 : 0
+DATEPART("dw", [Close_DtTm]) == 6 || DATEPART("dw", [Close_DtTm]) == 7 ? 1 : 0
 
 -- isLeapYear 
-YEAR([Close DtTm]) % 4 == 0
+YEAR([Close_DtTm]) % 4 == 0
 
 CREATE TABLE [Dim_Date] (
     [Date_ID] int identity(1,1),

@@ -6,50 +6,50 @@ Hour
 isNight
 
 /* -----------------------------------------------------------------*/
-/** Alarm DtTm **/
+/** Alarm_DtTm **/
 
 -- Second
-DATEPART("s",[Alarm DtTm])
+DATEPART("s",[Alarm_DtTm])
 
 -- Minute
-DATEPART("mi",[Alarm DtTm])
+DATEPART("mi",[Alarm_DtTm])
 
 -- Hour
-DATEPART("hh",[Alarm DtTm])
+DATEPART("hh",[Alarm_DtTm])
 
 -- isNight
-DATEPART("hh",[Alarm DtTm]) > 17 || DATEPART("hh",[Alarm DtTm]) < 5
+DATEPART("hh",[Alarm_DtTm]) > 17 || DATEPART("hh",[Alarm_DtTm]) < 5
 
 
 /* -----------------------------------------------------------------*/
-/** Arrival DtTm **/
+/** Arrival_DtTm**/
 
 -- Second
-DATEPART("s",[Arrival DtTm])
+DATEPART("s",[Arrival_DtTm)
 
 -- Minute
-DATEPART("mi",[Arrival DtTm])
+DATEPART("mi",[Arrival_DtTm)
 
 -- Hour
-DATEPART("hh",[Arrival DtTm])
+DATEPART("hh",[Arrival_DtTm)
 
 -- isNight
-DATEPART("hh",[Arrival DtTm]) > 17 || DATEPART("hh",[Arrival DtTm]) < 5
+DATEPART("hh",[Arrival_DtTm) > 17 || DATEPART("hh",[Arrival_DtTm) < 5
 
 /* -----------------------------------------------------------------*/
-/** Close DtTm **/
+/** Close_DtTm **/
 
 -- Second
-DATEPART("s",[Close DtTm])
+DATEPART("s",[Close_DtTm])
 
 -- Minute
-DATEPART("mi",[Close DtTm])
+DATEPART("mi",[Close_DtTm])
 
 -- Hour
-DATEPART("hh",[Close DtTm])
+DATEPART("hh",[Close_DtTm])
 
 -- isNight
-DATEPART("hh",[Close DtTm]) > 17 || DATEPART("hh",[Close DtTm]) < 5
+DATEPART("hh",[Close_DtTm]) > 17 || DATEPART("hh",[Close_DtTm]) < 5
 
 
 CREATE TABLE [Dim_Time] (
