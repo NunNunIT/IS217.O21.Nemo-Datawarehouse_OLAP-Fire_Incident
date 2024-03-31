@@ -1,94 +1,351 @@
 SSIS
 
-setup input .csv 
+setup input .csv
 Primary Situation	->	100
 Action Taken Primary	->	100
 Property Use		->	100
 Iginition Cause		->	100
 Heat Source		->	100
 
-- Property Use
+-------
+CREATE TABLE [Dim_Ignition_Cause] (
+  [Ignition_Cause_ID] varchar(4) PRIMARY KEY,
+  [Ignition_Cause_Desc] varchar(100)
+)
+GO
 
-property_id			(DT_STR, 4, 1252)TOKEN([Property Use]," ",1)
-property_desc			SUBSTRING([Property Use],FINDSTRING([Property Use]," ",1) + 1,LEN([Property Use]) - FINDSTRING([Property Use]," ",1))
+CREATE TABLE [Dim_Ignition_Factor] (
+  [Ignition_Factor_ID] varchar(4) PRIMARY KEY,
+  [Ignition_Factor_Desc] varchar(100)
+)
+GO
 
-CREATE TABLE [dim_property] (
-    [property_id] varchar(4) primary key,
-    [property_desc] nvarchar(50)
+CREATE TABLE [Dim_Heat_Source] (
+  [Heat_Source_ID] varchar(4) PRIMARY KEY,
+  [Heat_Source_Desc] varchar(100)
+)
+GO
+
+CREATE TABLE [Dim_Action] (
+  [Action_ID] varchar(4) PRIMARY KEY,
+  [Action_Desc] varchar(100)
+)
+GO
+
+CREATE TABLE [Dim_Property] (
+  [Property_ID] varchar(4) PRIMARY KEY,
+  [Property_Desc] varchar(100)
+)
+GO
+
+CREATE TABLE [Dim_Structure] (
+  [Structure_ID] varchar(4) PRIMARY KEY,
+  [Structure_Desc] varchar(100)
+)
+GO
+
+CREATE TABLE [Dim_Time] (
+  [Time_ID] int PRIMARY KEY,
+  [Time_inSecond] int,
+  [Second] smallint,
+  [Minute] smallint,
+  [Hour] smallint,
+  [isNight] bit
+)
+GO
+
+CREATE TABLE [Dim_Location] (
+  [Location_ID] int identity(1, 1) PRIMARY KEY,
+  [Zipcode] varchar(10),
+  [Supervisor_District] smallint,
+  [City] varchar(35)
+)
+GO
+
+CREATE TABLE [Dim_Station] (
+  [Station_ID] int identity(1, 1) PRIMARY KEY,
+  [Station_Area] char(2),
+  [Battalion] char(3)
+)
+GO
+
+CREATE TABLE [Dim_Situation] (
+  [Situation_ID] varchar(4) PRIMARY KEY,
+  [Situation_Desc] varchar(100)
+)
+GO
+
+CREATE TABLE [Dim_Date] (
+  [Date_Full] date,
+  [Day_of_Week] smallint,
+  [Day_Name] varchar(15),
+  [Day_of_Month] smallint,
+  [Day_of_Year] smallint,
+  [Month_of_Year] smallint,
+  [Month_Name] varchar(15),
+  [Year] smallint,
+  [isLeapYear] bit,
+  [Quarter] smallint,
+  [Quarter_Name] varchar(15),
+  [Week_of_Year] smallint,
+  [isWeekend] bit
+)
+GO
+
+-------
+Property_ID
+(DT_STR,4,1252)TOKEN([Property_Use]," ",1)
+
+Property_Desc
+(DT_STR,100,1252)SUBSTRING([Property_Use],FINDSTRING([Property_Use]," ",1) + 1,LEN([Property_Use]) - FINDSTRING([Property_Use]," ",1))
+
+
+Structure_ID
+(DT_STR,4,1252)TOKEN([Structure_Type]," ",1)
+
+Structure_Desc
+(DT_STR,100,1252)SUBSTRING([Structure_Type],FINDSTRING([Structure_Type]," ",1) + 1,LEN([Structure_Type]) - FINDSTRING([Structure_Type]," ",1))
+
+
+Heat_Source_ID
+(DT_STR,4,1252)TOKEN([Heat_Source]," ",1)
+
+Heat_Source_Desc
+(DT_STR,100,1252)SUBSTRING([Heat_Source],FINDSTRING([Heat_Source]," ",1) + 1,LEN([Heat_Source]) - FINDSTRING([Heat_Source]," ",1))
+
+
+Ignition_Factor_Primary_ID
+(DT_STR,4,1252)TOKEN([Ignition_Factor_Primary]," ",1)
+
+Ignition_Factor_Primary_Desc
+(DT_STR,100,1252)SUBSTRING([Ignition_Factor_Primary],FINDSTRING([Ignition_Factor_Primary]," ",1) + 1,LEN([Ignition_Factor_Primary]) - FINDSTRING([Ignition_Factor_Primary]," ",1))
+
+
+Ignition_Factor_Secondary_ID
+(DT_STR,4,1252)TOKEN([Ignition_Factor_Secondary]," ",1)
+
+Ignition_Factor_Secondary_Desc
+(DT_STR,100,1252)SUBSTRING([Ignition_Factor_Secondary],FINDSTRING([Ignition_Factor_Secondary]," ",1) + 1,LEN([Ignition_Factor_Secondary]) - FINDSTRING([Ignition_Factor_Secondary]," ",1))
+
+
+Ignition_Cause_ID
+(DT_STR,4,1252)TOKEN([Ignition_Cause]," ",1)
+
+Ignition_Cause_Desc
+(DT_STR,100,1252)SUBSTRING([Ignition_Cause],FINDSTRING([Ignition_Cause]," ",1) + 1,LEN([Ignition_Cause]) - FINDSTRING([Ignition_Cause]," ",1))
+
+
+Action_ID
+(DT_STR,4,1252)TOKEN([Action_Taken_Primary]," ",1)
+
+Action_Desc
+(DT_STR,100,1252)SUBSTRING([Action_Taken_Primary],FINDSTRING([Action_Taken_Primary]," ",1) + 1,LEN([Action_Taken_Primary]) - FINDSTRING([Action_Taken_Primary]," ",1))
+
+
+Situation_ID
+(DT_STR,4,1252)TOKEN([Primary_Situation]," ",1)
+
+Situation_Desc
+(DT_STR,100,1252)SUBSTRING([Primary_Situation],FINDSTRING([Primary_Situation]," ",1) + 1,LEN([Primary_Situation]) - FINDSTRING([Primary_Situation]," ",1))
+
+
+------
+Incident_Dt
+(DT_DBDATE)[Incident_Date]
+
+Incident_Dt_ID
+(DT_STR,8,1252)((DT_STR,4,1252)YEAR([Incident_Date]) + RIGHT("0" + (DT_STR,2,1252)MONTH([Incident_Date]),2) + RIGHT("0" + (DT_STR,2,1252)DAY([Incident_Date]),2))
+
+Alarm_Dt
+(DT_DBDATE)[Alarm_DtTm]
+
+Alarm_Dt_ID
+(DT_STR,8,1252)((DT_STR,4,1252)YEAR([Alarm_DtTm]) + RIGHT("0" + (DT_STR,2,1252)MONTH([Alarm_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DAY([Alarm_DtTm]),2))
+
+Arrival_Dt
+(DT_DBDATE)[Arrival_DtTm]
+
+Arrival_Dt_ID
+(DT_STR,8,1252)((DT_STR,4,1252)YEAR([Arrival_DtTm]) + RIGHT("0" + (DT_STR,2,1252)MONTH([Arrival_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DAY([Arrival_DtTm]),2))
+
+Close_Dt
+(DT_DBDATE)[Close_DtTm]
+
+Close_Dt_ID
+(DT_STR,8,1252)((DT_STR,4,1252)YEAR([Close_DtTm]) + RIGHT("0" + (DT_STR,2,1252)MONTH([Close_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DAY([Close_DtTm]),2))
+
+Alarm_Tm_ID
+(DT_STR,6,1252)(RIGHT("0" + (DT_STR,2,1252)DATEPART("hh",[Alarm_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("mi",[Alarm_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("s",[Alarm_DtTm]),2))
+
+Arrival_Tm_ID
+(DT_STR,6,1252)(RIGHT("0" + (DT_STR,2,1252)DATEPART("hh",[Arrival_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("mi",[Arrival_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("s",[Arrival_DtTm]),2))
+
+Close_Tm_ID
+(DT_STR,6,1252)(RIGHT("0" + (DT_STR,2,1252)DATEPART("hh",[Close_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("mi",[Close_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("s",[Close_DtTm]),2))
+
+
+------
+Duration_Tm_inSecond
+DATEDIFF("second",(DT_DBTIMESTAMP)[Arrival_DtTm],(DT_DBTIMESTAMP)[Close_DtTm])
+
+
+------
+- Location
+
+CREATE TABLE [Dim_Location] (
+    [Location_ID] int identity(1, 1) primary key,
+    [City] varchar(35),
+    [Supervisor_district] smallint,
+    [Zipcode] varchar(10)
 )
 
+- Date
 
-- Structure
+Day_of_Week
+DATEPART("dw",Date_Full)
 
-structure_id			(DT_STR, 4, 1252)TOKEN( [Structure Type]  ," ",1)
-structure_desc			SUBSTRING([Structure Type],FINDSTRING([Structure Type]," ",1) + 1,LEN([Structure Type]) - FINDSTRING([Structure Type]," ",1))
+Day_Name
+DATEPART("dw", Date_Full) == 1 ? "Monday" : DATEPART("dw", Date_Full) == 2 ? "Tuesday" : DATEPART("dw", Date_Full) == 3 ? "Wednesday" : DATEPART("dw", Date_Full) == 4 ? "Thursday" : DATEPART("dw", Date_Full) == 5 ? "Friday" : DATEPART("dw", Date_Full) == 6 ? "Saturday" : DATEPART("dw", Date_Full) == 7 ? "Sunday": "Invalid Day"
 
-CREATE TABLE [dim_structure] (
-    [structure_id] nvarchar(4) primary key,
-    [structure_desc] nvarchar(50)
+Day_of_Month
+DAY(Date_Full)
+
+Day_of_Year
+DATEPART("y",Date_Full)
+
+Month_of_Year
+MONTH(Date_Full)
+
+Month_Name
+MONTH(Date_Full) == 1 ? "Jan" : MONTH(Date_Full) == 2 ? "Feb" : MONTH(Date_Full) == 3 ? "Mar" : MONTH(Date_Full) == 4 ? "Apr" : MONTH(Date_Full) == 5 ? "May" : MONTH(Date_Full) == 6 ? "Jun" : MONTH(Date_Full) == 7 ? "Jul" : MONTH(Date_Full) == 8 ? "Aug" : MONTH(Date_Full) == 9 ? "Sep" : MONTH(Date_Full) == 10 ? "Oct" : MONTH(Date_Full) == 11 ? "Nov" : MONTH(Date_Full) == 12 ? "Dec" : "Invalid Month"
+
+Year
+YEAR(Date_Full)
+
+Week_of_Year
+DATEPART("wk", Date_Full)
+
+Quarter
+DATEPART("q", Date_Full)
+
+Quarter_Name
+DATEPART("q", Date_Full) == 1 ? "Q1" : DATEPART("q", Date_Full) == 2 ? "Q2" : DATEPART("q", Date_Full) == 3 ? "Q3" : DATEPART("q", Date_Full) == 4 ? "Q4" : "Invalid Quarter"
+
+isWeekend
+DATEPART("dw", Date_Full) == 6 || DATEPART("dw", Date_Full) == 7
+
+isLeapYear
+(YEAR(Date_Full) % 4 == 0 && YEAR(Date_Full) % 100 != 0) || (YEAR(Date_Full) % 400 == 0)
+
+
+CREATE TABLE [dim_date] (
+    [date_id] int identity(1, 1) primary key,
+    [dt_full] date,
+    [day_of_week] int,
+    [day_name] nvarchar(11),
+    [day_of_month] int,
+    [day_of_year] int,
+    [month_of_year] int,
+    [month_name] nvarchar(13),
+    [year] int,
+    [week_of_year] int,
+    [quarter] int,
+    [quarter_name] nvarchar(15),
+    [is_weekend] bit,
+    [is_leap_year] bit
 )
 
-
-- Heat Source
-
-heat_source_id			(DT_STR, 4, 1252)TOKEN( [Heat Source]  ," ",1)
-heat_source_desc		SUBSTRING([Heat Source],FINDSTRING([Heat Source]," ",1) + 1,LEN([Heat Source]) - FINDSTRING([Heat Source]," ",1))
-
-CREATE TABLE [dim_heat_source] (
-    [heat_source_id] nvarchar(4) primary key,
-    [heat_source_desc] nvarchar(50)
+CREATE TABLE [dim_time] (
+    [time_id] int identity(1, 1) primary key,
+    [time_full] char(6),
+    [second] int,
+    [minute] int,
+    [hour] int,
+    [is_night] bit
 )
 
-
-- Ignition Factor
-
-ignition_factor_id		(DT_STR, 4, 1252)TOKEN( [Ignition Factor]  ," ",1)
-ignition_factor_desc		SUBSTRING([Ignition Factor],FINDSTRING([Ignition Factor]," ",1) + 1,LEN([Ignition Factor]) - FINDSTRING([Ignition Factor]," ",1))
-
-CREATE TABLE [dim_iginition_factor] (
-    [ignition_factor_id] varchar(4) primary key,
-    [ignition_factor_desc] nvarchar(54)
+CREATE TABLE [raw_fact] (
+    [ID] int primary key,
+    [City] varchar(35),
+    [Zipcode] varchar(10),
+    [Battalion] varchar(3),
+    [Station_Area] varchar(2),
+    [Suppression_Units] real,
+    [Suppression_Personnel] real,
+    [EMS_Units] smallint,
+    [EMS_Personnel] smallint,
+    [Other_Units] smallint,
+    [Other_Personnel] smallint,
+    [Estimated_Property_Loss] real,
+    [Estimated_Contents_Loss] real,
+    [Fire_Fatalities] smallint,
+    [Fire_Injuries] smallint,
+    [Civilian_Fatalities] smallint,
+    [Civilian_Injuries] smallint,
+    [Number_of_Alarms] smallint,
+    [Number_of_floors_with_minimum_damage] smallint,
+    [Number_of_floors_with_significant_damage] smallint,
+    [Number_of_floors_with_heavy_damage] smallint,
+    [Number_of_floors_with_extreme_damage] smallint,
+    [Supervisor_District] smallint,
+    [property_id] varchar(4),
+    [structure_id] varchar(4),
+    [heat_source_id] varchar(4),
+    [ignition_factor_primary_id] varchar(4),
+    [ignition_factor_secondary_id] varchar(4),
+    [ignition_cause_id] varchar(4),
+    [action_id] varchar(4),
+    [situation_id] varchar(4),
+    [incident_dt] date,
+    [alarm_dt] date,
+    [arrival_dt] date,
+    [close_dt] date,
+    [alarm_tm] char(6),
+    [arrival_tm] char(6),
+    [close_tm] char(6),
+    [duration_tm_insecond] int
 )
 
+(DT_STR, 6, 1252)(RIGHT("0"+(DT_STR,2,1252)DATEPART("hh", [Alarm DtTm]), 2) + RIGHT("0"+(DT_STR,2,1252)DATEPART("mi", [Alarm DtTm]), 2) + RIGHT("0"+(DT_STR,2,1252)DATEPART("s", [Alarm DtTm]), 2))
+(DT_STR, 6, 1252)(RIGHT("0"+(DT_STR,2,1252)DATEPART("hh", [Arrival DtTm]), 2) + RIGHT("0"+(DT_STR,2,1252)DATEPART("mi", [Arrival DtTm]), 2) + RIGHT("0"+(DT_STR,2,1252)DATEPART("s", [Arrival DtTm]), 2))
+(DT_STR, 6, 1252)(RIGHT("0"+(DT_STR,2,1252)DATEPART("hh", [Close DtTm]), 2) + RIGHT("0"+(DT_STR,2,1252)DATEPART("mi", [Close DtTm]), 2) + RIGHT("0"+(DT_STR,2,1252)DATEPART("s", [Close DtTm]), 2))
 
-- Ignition Cause
 
-ignition_cause_id		(DT_STR, 4, 1252)TOKEN( [Ignition Cause]  ," ",1)
-ignition_cause_desc		SUBSTRING([Ignition Cause],FINDSTRING([Ignition Cause]," ",1) + 1,LEN([Ignition Cause]) - FINDSTRING([Ignition Cause]," ",1))
-
-CREATE TABLE [dim_ignition_cause] (
-    [ignition_cause_id] nvarchar(4) primary key,
-    [ignition_cause_desc] nvarchar(50)
+CREATE TABLE [Fact] (
+    [ID] int,
+    [property_id] varchar(4) ,
+    [structure_id] varchar(4),
+    [heat_source_id] varchar(4),
+    [ignition_factor_primary_id] varchar(4),
+    [ignition_factor_secondary_id] varchar(4),
+    [ignition_cause_id] varchar(4),
+    [action_id] varchar(4),
+    [situation_id] varchar(4),
+    [duration_tm_insecond] int,
+    [station_id] int,
+    [location_id] int,
+    [incident_dt_id] int,
+    [alarm_dt_id] int,
+    [arrival_dt_id] int,
+    [close_dt_id] int,
+    [Suppression_Units] real,
+    [alarm_tm_id] int,
+    [arrival_tm_id] int,
+    [close_tm_id] int,
+    [Suppression_Personnel] real,
+    [EMS_Units] smallint,
+    [EMS_Personnel] smallint,
+    [Other_Units] smallint,
+    [Other_Personnel] smallint,
+    [Estimated_Property_Loss] real,
+    [Estimated_Contents_Loss] real,
+    [Fire_Fatalities] smallint,
+    [Fire_Injuries] smallint,
+    [Civilian_Fatalities] smallint,
+    [Civilian_Injuries] smallint,
+    [Number_of_Alarms] smallint,
+    [Number_of_floors_with_minimum_damage] smallint,
+    [Number_of_floors_with_significant_damage] smallint,
+    [Number_of_floors_with_heavy_damage] smallint,
+    [Number_of_floors_with_extreme_damage] smallint
 )
-
-
-- Action
-
-action_id			(DT_STR, 4, 1252)TOKEN([Action Taken Primary], " ", 1)
-action_desc 			SUBSTRING([Action Taken Primary],FINDSTRING([Action Taken Primary]," ",1) + 1,LEN([Action Taken Primary]) - FINDSTRING([Action Taken Primary]," ",1))
-
-CREATE TABLE [dim_action] (
-    [action_id] nvarchar(4) primary key,
-    [action_desc] nvarchar(50)
-)
-
-
-- Station
-
-CREATE TABLE [dim_station] (
-    [station_id]		INT IDENTITY(1, 1) PRIMARY KEY
-    [Station Area] 		varchar(50),
-    [Battalion] 		varchar(50)
-)
-
-
-- Situation
-
-primary_situation_id		(DT_STR, 4, 1252)TOKEN([Primary Situation]," ",1)
-primary_situation_desc		SUBSTRING([Primary Situation],FINDSTRING([Primary Situation]," ",1) + 1,LEN([Primary Situation]) - FINDSTRING([Primary Situation]," ",1))
-
-CREATE TABLE [dim_situation] (
-    [situation_id] nvarchar(4) primary key,
-    [situation_desc] nvarchar(50)
-)
-
