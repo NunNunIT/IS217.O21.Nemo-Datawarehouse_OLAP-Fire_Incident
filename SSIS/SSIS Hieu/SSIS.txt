@@ -1,13 +1,15 @@
-SSIS
+USE MASTER;
 
-setup input .csv
-Primary Situation	->	100
-Action Taken Primary	->	100
-Property Use		->	100
-Iginition Cause		->	100
-Heat Source		->	100
+IF EXISTS (SELECT NAME FROM SYSDATABASES WHERE NAME='FIRE_INCIDENT')
+BEGIN
+  ALTER DATABASE FIRE_INCIDENT SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+  DROP DATABASE FIRE_INCIDENT;
+END
 
+CREATE DATABASE FIRE_INCIDENT;
+GO
 -------
+
 CREATE TABLE [Dim_Ignition_Cause] (
   [Ignition_Cause_ID] varchar(4) PRIMARY KEY,
   [Ignition_Cause_Desc] varchar(100)
@@ -92,103 +94,157 @@ CREATE TABLE [Dim_Date] (
 GO
 
 CREATE TABLE [Raw_Fact] (
-    [Fact_ID] int PRIMARY KEY,
-    [City] varchar(35),
-    [zipcode] varchar(10),
-    [Battalion] varchar(3),
-    [Station_Area] varchar(2),
-    [Suppression_Units] decimal(28,0),
-    [Suppression_Personnel] decimal(28,0),
-    [EMS_Units] decimal(28,0),
-    [EMS_Personnel] decimal(28,0),
-    [Other_Units] decimal(28,0),
-    [Other_Personnel] decimal(28,0),
-    [Estimated_Property_Loss] decimal(28,0),
-    [Estimated_Contents_Loss] decimal(28,0),
-    [Fire_Fatalities] smallint,
-    [Fire_Injuries] smallint,
-    [Civilian_Fatalities] smallint,
-    [Civilian_Injuries] smallint,
-    [Number_of_Alarms] smallint,
-    [Number_of_floors_with_minimum_damage] decimal(28,0),
-    [Number_of_floors_with_significant_damage] decimal(28,0),
-    [Number_of_floors_with_heavy_damage] decimal(28,0),
-    [Number_of_floors_with_extreme_damage] decimal(28,0),
-    [Supervisor_District] smallint,
-    [Property_ID] varchar(4),
-    [Structure_ID] varchar(4),
-    [Heat_Source_ID] varchar(4),
-    [Ignition_Factor_Primary_ID] varchar(4),
-    [Ignition_Factor_Secondary_ID] varchar(4),
-    [Ignition_Cause_ID] varchar(4),
-    [Action_ID] varchar(4),
-    [Situation_ID] varchar(4),
-    [Incident_Dt_ID] varchar(8),
-    [Alarm_Dt_ID] varchar(8),
-    [Arrival_Dt_ID] varchar(8),
-    [Close_Dt_ID] varchar(8),
-    [Alarm_Tm_ID] varchar(6),
-    [Arrival_Tm_ID] varchar(6),
-    [Close_Tm_ID] varchar(6),
-    [Duration_Tm_inSecond] int
-)
-
-CREATE TABLE [Fact] (
-    [Fact_ID] int primary key,
-    [Property_ID] varchar(4),
-    [Structure_ID] varchar(4),
-    [Heat_Source_ID] varchar(4),
-    [Ignition_Factor_Primary_ID] varchar(4),
-    [Ignition_Factor_Secondary_ID] varchar(4),
-    [Ignition_Cause_ID] varchar(4),
-    [Action_ID] varchar(4),
-    [Situation_ID] varchar(4),
-    [Incident_Dt_ID] varchar(8),
-    [Alarm_Dt_ID] varchar(8),
-    [Arrival_Dt_ID] varchar(8),
-    [Close_Dt_ID] varchar(8),
-    [Alarm_Tm_ID] varchar(6),
-    [Arrival_Tm_ID] varchar(6),
-    [Close_Tm_ID] varchar(6),
-    [Station_ID] int,
-    [Location_ID] int,
-    [Suppression_Units] numeric(28,0),
-    [Suppression_Personnel] numeric(28,0),
-    [EMS_Units] numeric(28,0),
-    [EMS_Personnel] numeric(28,0),
-    [Other_Units] numeric(28,0),
-    [Other_Personnel] numeric(28,0),
-    [Estimated_Property_Loss] numeric(28,0),
-    [Estimated_Contents_Loss] numeric(28,0),
-    [Fire_Fatalities] smallint,
-    [Fire_Injuries] smallint,
-    [Civilian_Fatalities] smallint,
-    [Civilian_Injuries] smallint,
-    [Number_of_Alarms] smallint,
-    [Number_of_floors_with_minimum_damage] numeric(28,0),
-    [Number_of_floors_with_significant_damage] numeric(28,0),
-    [Number_of_floors_with_heavy_damage] numeric(28,0),
-    [Number_of_floors_with_extreme_damage] numeric(28,0),
-    [Duration_Tm_inSecond] int,
-    FOREIGN KEY ([Property_ID]) REFERENCES [Dim_Property] ([Property_ID]),
-    FOREIGN KEY ([Structure_ID]) REFERENCES [Dim_Structure] ([Structure_ID]),
-    FOREIGN KEY ([Heat_Source_ID]) REFERENCES [Dim_Heat_Source] ([Heat_Source_ID]),
-    FOREIGN KEY ([Ignition_Factor_Primary_ID]) REFERENCES [Dim_Ignition_Factor] ([Ignition_Factor_ID]),
-    FOREIGN KEY ([Ignition_Factor_Secondary_ID]) REFERENCES [Dim_Ignition_Factor] ([Ignition_Factor_ID]),
-    FOREIGN KEY ([Ignition_Cause_ID]) REFERENCES [Dim_Ignition_Cause] ([Ignition_Cause_ID]),
-    FOREIGN KEY ([Action_ID]) REFERENCES [Dim_Action] ([Action_ID]),
-    FOREIGN KEY ([Situation_ID]) REFERENCES [Dim_Situation] ([Situation_ID]),
-    FOREIGN KEY ([Incident_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),
-    FOREIGN KEY ([Alarm_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),
-    FOREIGN KEY ([Arrival_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),
-    FOREIGN KEY ([Close_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),
-    FOREIGN KEY ([Alarm_Tm_ID]) REFERENCES [Dim_Time] ([Time_ID]),
-    FOREIGN KEY ([Arrival_Tm_ID]) REFERENCES [Dim_Time] ([Time_ID]),
-    FOREIGN KEY ([Close_Tm_ID]) REFERENCES [Dim_Time] ([Time_ID]),
-    FOREIGN KEY ([Station_ID]) REFERENCES [Dim_Station] ([Station_ID]),
-    FOREIGN KEY ([Location_ID]) REFERENCES [Dim_Location] ([Location_ID])
+  [Fact_ID] int PRIMARY KEY,
+  [City] varchar(35),
+  [zipcode] varchar(10),
+  [Battalion] varchar(3),
+  [Station_Area] varchar(2),
+  [Suppression_Units] decimal(28,0),
+  [Suppression_Personnel] decimal(28,0),
+  [EMS_Units] decimal(28,0),
+  [EMS_Personnel] decimal(28,0),
+  [Other_Units] decimal(28,0),
+  [Other_Personnel] decimal(28,0),
+  [Estimated_Property_Loss] decimal(28,0),
+  [Estimated_Contents_Loss] decimal(28,0),
+  [Fire_Fatalities] smallint,
+  [Fire_Injuries] smallint,
+  [Civilian_Fatalities] smallint,
+  [Civilian_Injuries] smallint,
+  [Number_of_Alarms] smallint,
+  [Number_of_floors_with_minimum_damage] decimal(28,0),
+  [Number_of_floors_with_significant_damage] decimal(28,0),
+  [Number_of_floors_with_heavy_damage] decimal(28,0),
+  [Number_of_floors_with_extreme_damage] decimal(28,0),
+  [Supervisor_District] smallint,
+  [Property_ID] varchar(4),
+  [Property_Desc] varchar(100),
+  [Structure_ID] varchar(4),
+  [Structure_Desc] varchar(100),
+  [Heat_Source_ID] varchar(4),
+  [Heat_Source_Desc] varchar(100),
+  [Ignition_Factor_Primary_ID] varchar(4),
+  [Ignition_Factor_Primary_Desc] varchar(100),
+  [Ignition_Factor_Secondary_ID] varchar(4),
+  [Ignition_Factor_Secondary_Desc] varchar(100),
+  [Ignition_Cause_ID] varchar(4),
+  [Ignition_Cause_Desc] varchar(100),
+  [Action_ID] varchar(4),
+  [Action_Desc] varchar(100),
+  [Situation_ID] varchar(4),
+  [Situation_Desc] varchar(100),
+  [Incident_Dt_ID] varchar(8),
+  [Incident_Dt] DATE,
+  [Alarm_Dt_ID] varchar(8),
+  [Alarm_Dt] DATE,
+  [Arrival_Dt_ID] varchar(8),
+  [Arrival_Dt] DATE,
+  [Close_Dt_ID] varchar(8),
+  [Close_Dt] DATE,
+  [Alarm_Tm_ID] varchar(6),
+  [Arrival_Tm_ID] varchar(6),
+  [Close_Tm_ID] varchar(6),
+  [Duration_Tm_inSecond] int
 )
 GO
+
+CREATE TABLE [Fact] (
+  [Fact_ID] int primary key,
+  [Property_ID] varchar(4),
+  [Structure_ID] varchar(4),
+  [Heat_Source_ID] varchar(4),
+  [Ignition_Factor_Primary_ID] varchar(4),
+  [Ignition_Factor_Secondary_ID] varchar(4),
+  [Ignition_Cause_ID] varchar(4),
+  [Action_ID] varchar(4),
+  [Situation_ID] varchar(4),
+  [Incident_Dt_ID] varchar(8),
+  [Alarm_Dt_ID] varchar(8),
+  [Arrival_Dt_ID] varchar(8),
+  [Close_Dt_ID] varchar(8),
+  [Alarm_Tm_ID] varchar(6),
+  [Arrival_Tm_ID] varchar(6),
+  [Close_Tm_ID] varchar(6),
+  [Station_ID] int,
+  [Location_ID] int,
+  [Suppression_Units] numeric(28,0),
+  [Suppression_Personnel] numeric(28,0),
+  [EMS_Units] numeric(28,0),
+  [EMS_Personnel] numeric(28,0),
+  [Other_Units] numeric(28,0),
+  [Other_Personnel] numeric(28,0),
+  [Estimated_Property_Loss] numeric(28,0),
+  [Estimated_Contents_Loss] numeric(28,0),
+  [Fire_Fatalities] smallint,
+  [Fire_Injuries] smallint,
+  [Civilian_Fatalities] smallint,
+  [Civilian_Injuries] smallint,
+  [Number_of_Alarms] smallint,
+  [Number_of_floors_with_minimum_damage] numeric(28,0),
+  [Number_of_floors_with_significant_damage] numeric(28,0),
+  [Number_of_floors_with_heavy_damage] numeric(28,0),
+  [Number_of_floors_with_extreme_damage] numeric(28,0),
+  [Duration_Tm_inSecond] int,
+  FOREIGN KEY ([Property_ID]) REFERENCES [Dim_Property] ([Property_ID]),
+  FOREIGN KEY ([Structure_ID]) REFERENCES [Dim_Structure] ([Structure_ID]),
+  FOREIGN KEY ([Heat_Source_ID]) REFERENCES [Dim_Heat_Source] ([Heat_Source_ID]),
+  FOREIGN KEY ([Ignition_Factor_Primary_ID]) REFERENCES [Dim_Ignition_Factor] ([Ignition_Factor_ID]),
+  FOREIGN KEY ([Ignition_Factor_Secondary_ID]) REFERENCES [Dim_Ignition_Factor] ([Ignition_Factor_ID]),
+  FOREIGN KEY ([Ignition_Cause_ID]) REFERENCES [Dim_Ignition_Cause] ([Ignition_Cause_ID]),
+  FOREIGN KEY ([Action_ID]) REFERENCES [Dim_Action] ([Action_ID]),
+  FOREIGN KEY ([Situation_ID]) REFERENCES [Dim_Situation] ([Situation_ID]),
+  FOREIGN KEY ([Incident_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),
+  FOREIGN KEY ([Alarm_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),
+  FOREIGN KEY ([Arrival_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),
+  FOREIGN KEY ([Close_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),
+  FOREIGN KEY ([Alarm_Tm_ID]) REFERENCES [Dim_Time] ([Time_ID]),
+  FOREIGN KEY ([Arrival_Tm_ID]) REFERENCES [Dim_Time] ([Time_ID]),
+  FOREIGN KEY ([Close_Tm_ID]) REFERENCES [Dim_Time] ([Time_ID]),
+  FOREIGN KEY ([Station_ID]) REFERENCES [Dim_Station] ([Station_ID]),
+  FOREIGN KEY ([Location_ID]) REFERENCES [Dim_Location] ([Location_ID])
+)
+GO
+
+
+------
+Incident_Dt_ID
+(DT_STR,8,1252)((DT_STR,4,1252)YEAR(Incident_Date) + RIGHT("0" + (DT_STR,2,1252)MONTH(Incident_Date),2) + RIGHT("0" + (DT_STR,2,1252)DAY(Incident_Date),2))
+
+Alarm_Dt_ID
+(DT_STR,8,1252)((DT_STR,4,1252)YEAR(Alarm_DtTm) + RIGHT("0" + (DT_STR,2,1252)MONTH(Alarm_DtTm),2) + RIGHT("0" + (DT_STR,2,1252)DAY(Alarm_DtTm),2))
+
+Arrival_Dt_ID
+(DT_STR,8,1252)((DT_STR,4,1252)YEAR(Arrival_DtTm) + RIGHT("0" + (DT_STR,2,1252)MONTH(Arrival_DtTm),2) + RIGHT("0" + (DT_STR,2,1252)DAY(Arrival_DtTm),2))
+
+Close_Dt_ID
+(DT_STR,8,1252)((DT_STR,4,1252)YEAR(Close_DtTm) + RIGHT("0" + (DT_STR,2,1252)MONTH(Close_DtTm),2) + RIGHT("0" + (DT_STR,2,1252)DAY(Close_DtTm),2))
+
+Incident_Dt
+(DT_DBDATE)[Incident_Date]
+
+Alarm_Dt
+(DT_DBDATE)[Alarm_DtTm]
+
+Arrival_Dt
+(DT_DBDATE)[Arrival_DtTm]
+
+Close_Dt
+(DT_DBDATE)[Close_DtTm]
+
+Alarm_Tm_ID
+(DT_STR,6,1252)(RIGHT("0" + (DT_STR,2,1252)DATEPART("hh",[Alarm_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("mi",[Alarm_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("s",[Alarm_DtTm]),2))
+
+Arrival_Tm_ID
+(DT_STR,6,1252)(RIGHT("0" + (DT_STR,2,1252)DATEPART("hh",[Arrival_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("mi",[Arrival_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("s",[Arrival_DtTm]),2))
+
+Close_Tm_ID
+(DT_STR,6,1252)(RIGHT("0" + (DT_STR,2,1252)DATEPART("hh",[Close_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("mi",[Close_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("s",[Close_DtTm]),2))
+
+
+------
+Duration_Tm_inSecond
+DATEDIFF("second",(DT_DBTIMESTAMP)[Arrival_DtTm],(DT_DBTIMESTAMP)[Close_DtTm])
+
 
 -------
 Property_ID
@@ -248,256 +304,38 @@ Situation_Desc
 
 
 ------
-Incident_Dt
-(DT_DBDATE)[Incident_Date]
-
-Alarm_Dt
-(DT_DBDATE)[Alarm_DtTm]
-
-Arrival_Dt
-(DT_DBDATE)[Arrival_DtTm]
-
-Close_Dt
-(DT_DBDATE)[Close_DtTm]
-
-Alarm_Second
-DATEPART("s",[Alarm_DtTm])
-
-Alarm_Minute
-DATEPART("mi",[Alarm_DtTm])
-
-Alarm_Hour
-DATEPART("hh",[Alarm_DtTm])
-
-Arrival_Second
-DATEPART("s",[Arrival_DtTm])
-
-Arrival_Minute
-DATEPART("mi",[Arrival_DtTm])
-
-Arrival_Hour
-DATEPART("hh",[Arrival_DtTm])
-
-Close_Second
-DATEPART("s",[Close_DtTm])
-
-Close_Minute
-DATEPART("mi",[Close_DtTm])
-
-Close_Hour
-DATEPART("hh",[Close_DtTm])
-
-Alarm_Time
-(DT_STR,6,1252)(RIGHT("0" + (DT_STR,2,1252)DATEPART("hh",[Alarm_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("mi",[Alarm_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("s",[Alarm_DtTm]),2))
-
-Arrival_Time
-(DT_STR,6,1252)(RIGHT("0" + (DT_STR,2,1252)DATEPART("hh",[Arrival_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("mi",[Arrival_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("s",[Arrival_DtTm]),2))
-
-Close_Time
-(DT_STR,6,1252)(RIGHT("0" + (DT_STR,2,1252)DATEPART("hh",[Close_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("mi",[Close_DtTm]),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("s",[Close_DtTm]),2))
-
-
-------
-Duration_Tm_inSecond
-DATEDIFF("second",(DT_DBTIMESTAMP)[Arrival_DtTm],(DT_DBTIMESTAMP)[Close_DtTm])
-
-
-------
-- Location
-
-CREATE TABLE [Dim_Location] (
-    [Location_ID] int identity(1, 1) primary key,
-    [City] varchar(35),
-    [Supervisor_district] smallint,
-    [Zipcode] varchar(10)
-)
-
-- Date
-
 Day_of_Week
-DATEPART("dw",Date_Full)
+DATEPART("dw",(DT_DATE)Date_Full)
 
 Day_Name
-DATEPART("dw", Date_Full) == 1 ? "Monday" : DATEPART("dw", Date_Full) == 2 ? "Tuesday" : DATEPART("dw", Date_Full) == 3 ? "Wednesday" : DATEPART("dw", Date_Full) == 4 ? "Thursday" : DATEPART("dw", Date_Full) == 5 ? "Friday" : DATEPART("dw", Date_Full) == 6 ? "Saturday" : DATEPART("dw", Date_Full) == 7 ? "Sunday": "Invalid Day"
+(DT_STR, 15, 1252)(DATEPART("dw", (DT_DATE)Date_Full) == 1 ? "Monday" : DATEPART("dw", (DT_DATE)Date_Full) == 2 ? "Tuesday" : DATEPART("dw", (DT_DATE)Date_Full) == 3 ? "Wednesday" : DATEPART("dw", (DT_DATE)Date_Full) == 4 ? "Thursday" : DATEPART("dw", (DT_DATE)Date_Full) == 5 ? "Friday" : DATEPART("dw", (DT_DATE)Date_Full) == 6 ? "Saturday" : DATEPART("dw", (DT_DATE)Date_Full) == 7 ? "Sunday": "Invalid Day")
 
 Day_of_Month
-DAY(Date_Full)
+DAY((DT_DATE)Date_Full)
 
 Day_of_Year
-DATEPART("y",Date_Full)
+DATEPART("y",(DT_DATE)Date_Full)
 
 Month_of_Year
-MONTH(Date_Full)
+MONTH((DT_DATE)Date_Full)
 
 Month_Name
-MONTH(Date_Full) == 1 ? "Jan" : MONTH(Date_Full) == 2 ? "Feb" : MONTH(Date_Full) == 3 ? "Mar" : MONTH(Date_Full) == 4 ? "Apr" : MONTH(Date_Full) == 5 ? "May" : MONTH(Date_Full) == 6 ? "Jun" : MONTH(Date_Full) == 7 ? "Jul" : MONTH(Date_Full) == 8 ? "Aug" : MONTH(Date_Full) == 9 ? "Sep" : MONTH(Date_Full) == 10 ? "Oct" : MONTH(Date_Full) == 11 ? "Nov" : MONTH(Date_Full) == 12 ? "Dec" : "Invalid Month"
+(DT_STR, 15, 1252)(MONTH((DT_DATE)Date_Full) == 1 ? "Jan" : MONTH((DT_DATE)Date_Full) == 2 ? "Feb" : MONTH((DT_DATE)Date_Full) == 3 ? "Mar" : MONTH((DT_DATE)Date_Full) == 4 ? "Apr" : MONTH((DT_DATE)Date_Full) == 5 ? "May" : MONTH((DT_DATE)Date_Full) == 6 ? "Jun" : MONTH((DT_DATE)Date_Full) == 7 ? "Jul" : MONTH((DT_DATE)Date_Full) == 8 ? "Aug" : MONTH((DT_DATE)Date_Full) == 9 ? "Sep" : MONTH((DT_DATE)Date_Full) == 10 ? "Oct" : MONTH((DT_DATE)Date_Full) == 11 ? "Nov" : MONTH((DT_DATE)Date_Full) == 12 ? "Dec" : "Invalid Month")
 
 Year
-YEAR(Date_Full)
+YEAR((DT_DATE)Date_Full)
 
 Week_of_Year
-DATEPART("wk", Date_Full)
+DATEPART("wk", (DT_DATE)Date_Full)
 
 Quarter
-DATEPART("q", Date_Full)
+DATEPART("q", (DT_DATE)Date_Full)
 
 Quarter_Name
-DATEPART("q", Date_Full) == 1 ? "Q1" : DATEPART("q", Date_Full) == 2 ? "Q2" : DATEPART("q", Date_Full) == 3 ? "Q3" : DATEPART("q", Date_Full) == 4 ? "Q4" : "Invalid Quarter"
+(DT_STR, 15, 1252)(DATEPART("q", (DT_DATE)Date_Full) == 1 ? "Q1" : DATEPART("q", (DT_DATE)Date_Full) == 2 ? "Q2" : DATEPART("q", (DT_DATE)Date_Full) == 3 ? "Q3" : DATEPART("q", (DT_DATE)Date_Full) == 4 ? "Q4" : "Invalid Quarter")
 
 isWeekend
-DATEPART("dw", Date_Full) == 6 || DATEPART("dw", Date_Full) == 7
+DATEPART("dw", (DT_DATE)Date_Full) == 6 || DATEPART("dw", (DT_DATE)Date_Full) == 7
 
 isLeapYear
-(YEAR(Date_Full) % 4 == 0 && YEAR(Date_Full) % 100 != 0) || (YEAR(Date_Full) % 400 == 0)
-
-
-CREATE TABLE [dim_date] (
-    [date_id] int identity(1, 1) primary key,
-    [dt_full] date,
-    [day_of_week] int,
-    [day_name] nvarchar(11),
-    [day_of_month] int,
-    [day_of_year] int,
-    [month_of_year] int,
-    [month_name] nvarchar(13),
-    [year] int,
-    [week_of_year] int,
-    [quarter] int,
-    [quarter_name] nvarchar(15),
-    [is_weekend] bit,
-    [is_leap_year] bit
-)
-
-CREATE TABLE [dim_time] (
-    [time_id] int identity(1, 1) primary key,
-    [time_full] char(6),
-    [second] int,
-    [minute] int,
-    [hour] int,
-    [is_night] bit
-)
-
-CREATE TABLE [Raw_Fact] (
-    [ID] int primary key,
-    [City] varchar(35),
-    [Zipcode] varchar(10),
-    [Battalion] varchar(3),
-    [Station_Area] varchar(2),
-    [Suppression_Units] real,
-    [Suppression_Personnel] real,
-    [EMS_Units] smallint,
-    [EMS_Personnel] smallint,
-    [Other_Units] smallint,
-    [Other_Personnel] smallint,
-    [Estimated_Property_Loss] real,
-    [Estimated_Contents_Loss] real,
-    [Fire_Fatalities] smallint,
-    [Fire_Injuries] smallint,
-    [Civilian_Fatalities] smallint,
-    [Civilian_Injuries] smallint,
-    [Number_of_Alarms] smallint,
-    [Number_of_floors_with_minimum_damage] smallint,
-    [Number_of_floors_with_significant_damage] smallint,
-    [Number_of_floors_with_heavy_damage] smallint,
-    [Number_of_floors_with_extreme_damage] smallint,
-    [Supervisor_District] smallint,
-    [property_id] varchar(4),
-    [structure_id] varchar(4),
-    [heat_source_id] varchar(4),
-    [ignition_factor_primary_id] varchar(4),
-    [ignition_factor_secondary_id] varchar(4),
-    [ignition_cause_id] varchar(4),
-    [action_id] varchar(4),
-    [situation_id] varchar(4),
-    [incident_dt] date,
-    [alarm_dt] date,
-    [arrival_dt] date,
-    [close_dt] date,
-    [alarm_tm] char(6),
-    [arrival_tm] char(6),
-    [close_tm] char(6),
-    [duration_tm_insecond] int
-)
-
-(DT_STR, 6, 1252)(RIGHT("0"+(DT_STR,2,1252)DATEPART("hh", [Alarm DtTm]), 2) + RIGHT("0"+(DT_STR,2,1252)DATEPART("mi", [Alarm DtTm]), 2) + RIGHT("0"+(DT_STR,2,1252)DATEPART("s", [Alarm DtTm]), 2))
-(DT_STR, 6, 1252)(RIGHT("0"+(DT_STR,2,1252)DATEPART("hh", [Arrival DtTm]), 2) + RIGHT("0"+(DT_STR,2,1252)DATEPART("mi", [Arrival DtTm]), 2) + RIGHT("0"+(DT_STR,2,1252)DATEPART("s", [Arrival DtTm]), 2))
-(DT_STR, 6, 1252)(RIGHT("0"+(DT_STR,2,1252)DATEPART("hh", [Close DtTm]), 2) + RIGHT("0"+(DT_STR,2,1252)DATEPART("mi", [Close DtTm]), 2) + RIGHT("0"+(DT_STR,2,1252)DATEPART("s", [Close DtTm]), 2))
-
-
-CREATE TABLE [Fact] (
-    [ID] int,
-    [property_id] varchar(4) ,
-    [structure_id] varchar(4),
-    [heat_source_id] varchar(4),
-    [ignition_factor_primary_id] varchar(4),
-    [ignition_factor_secondary_id] varchar(4),
-    [ignition_cause_id] varchar(4),
-    [action_id] varchar(4),
-    [situation_id] varchar(4),
-    [duration_tm_insecond] int,
-    [station_id] int,
-    [location_id] int,
-    [incident_dt_id] int,
-    [alarm_dt_id] int,
-    [arrival_dt_id] int,
-    [close_dt_id] int,
-    [Suppression_Units] real,
-    [alarm_tm_id] int,
-    [arrival_tm_id] int,
-    [close_tm_id] int,
-    [Suppression_Personnel] real,
-    [EMS_Units] smallint,
-    [EMS_Personnel] smallint,
-    [Other_Units] smallint,
-    [Other_Personnel] smallint,
-    [Estimated_Property_Loss] real,
-    [Estimated_Contents_Loss] real,
-    [Fire_Fatalities] smallint,
-    [Fire_Injuries] smallint,
-    [Civilian_Fatalities] smallint,
-    [Civilian_Injuries] smallint,
-    [Number_of_Alarms] smallint,
-    [Number_of_floors_with_minimum_damage] smallint,
-    [Number_of_floors_with_significant_damage] smallint,
-    [Number_of_floors_with_heavy_damage] smallint,
-    [Number_of_floors_with_extreme_damage] smallint
-)
-
-CREATE TABLE [Fact] (
-    [Fact_ID] int primary key,
-    [Property_ID] varchar(4) ,
-    [Structure_ID] varchar(4),
-    [Heat_Source_ID] varchar(4),
-    [Ignition_Factor_Primary_ID] varchar(4),
-    [Ignition_Factor_Secondary_ID] varchar(4),
-    [Ignition_Cause_ID] varchar(4),
-    [Action_ID] varchar(4),
-    [Situation_ID] varchar(4),
-    [Incident_Dt_ID] varchar(8),
-    [Alarm_Dt_ID] varchar(8),
-    [Arrival_Dt_ID] varchar(8),
-    [Close_Dt_ID] varchar(8),
-    [Alarm_Tm_ID] varchar(6),
-    [Arrival_Tm_ID] varchar(6),
-    [Close_Tm_ID] varchar(6),
-    [Station_ID] int,
-    [Location_ID] int,
-    [Suppression_Units] numeric(28,0),
-    [Suppression_Personnel] numeric(28,0),
-    [EMS_Units] numeric(28,0),
-    [EMS_Personnel] numeric(28,0),
-    [Other_Units] numeric(28,0),
-    [Other_Personnel] numeric(28,0),
-    [Estimated_Property_Loss] numeric(28,0),
-    [Estimated_Contents_Loss] numeric(28,0),
-    [Fire_Fatalities] smallint,
-    [Fire_Injuries] smallint,
-    [Civilian_Fatalities] smallint,
-    [Civilian_Injuries] smallint,
-    [Number_of_Alarms] smallint,
-    [Number_of_floors_with_minimum_damage] numeric(28,0),
-    [Number_of_floors_with_significant_damage] numeric(28,0),
-    [Number_of_floors_with_heavy_damage] numeric(28,0),
-    [Number_of_floors_with_extreme_damage] numeric(28,0),
-    [Duration_Tm_inSecond] int
-)
+(YEAR((DT_DATE)Date_Full) % 4 == 0 && YEAR((DT_DATE)Date_Full) % 100 != 0) || (YEAR((DT_DATE)Date_Full) % 400 == 0)
