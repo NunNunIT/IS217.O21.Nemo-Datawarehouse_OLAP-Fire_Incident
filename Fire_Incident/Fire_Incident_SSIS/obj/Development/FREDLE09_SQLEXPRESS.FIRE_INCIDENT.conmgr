@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="FREDLE09_SQLEXPRESS.FIRE_INCIDENT"
+  DTS:DTSID="{8F980BBF-0ADE-48FD-B277-221535067442}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=FREDLE09\SQLDEVELOPER;Initial Catalog=FIRE_INCIDENT;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Fire_Incident_SSIS-{8F980BBF-0ADE-48FD-B277-221535067442}FREDLE09\SQLEXPRESS.FIRE_INCIDENT;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
