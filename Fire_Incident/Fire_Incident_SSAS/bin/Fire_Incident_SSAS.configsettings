@@ -12,10 +12,13 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Dim Location</ID>
+        <ID>Dim Action</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Station</ID>
+        <ID>Dim Date</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Heat Source</ID>
       </Dimension>
       <Dimension>
         <ID>Dim Ignition Cause</ID>
@@ -24,25 +27,22 @@
         <ID>Dim Ignition Factor</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Action</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Time</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Heat Source</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Situation</ID>
+        <ID>Dim Location</ID>
       </Dimension>
       <Dimension>
         <ID>Dim Property</ID>
       </Dimension>
       <Dimension>
+        <ID>Dim Situation</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Station</ID>
+      </Dimension>
+      <Dimension>
         <ID>Dim Structure</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Date</ID>
+        <ID>Dim Time</ID>
       </Dimension>
     </Dimensions>
     <Cubes>

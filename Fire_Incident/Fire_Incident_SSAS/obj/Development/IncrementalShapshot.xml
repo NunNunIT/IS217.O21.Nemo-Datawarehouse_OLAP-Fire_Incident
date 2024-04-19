@@ -5,7 +5,7 @@
     <ConnectionString>Data Source=FREDLE09\SQLDEVELOPER;Timeout=0</ConnectionString>
   </Target>
   <Options>
-    <TransactionalDeployment>true</TransactionalDeployment>
+    <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
     <ProcessingOption>Default</ProcessingOption>
@@ -19,98 +19,98 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>X9giAzVrG9sOJKeLItHqwcwFYNk=4/14/2024 6:02:38 PM4/14/2024 2:39:28 PM</TimeStamp>
+        <TimeStamp>uxPCmAuGSd1gKJSZph6K4/mi90s=4/19/2024 3:20:23 AM4/19/2024 3:20:23 AM</TimeStamp>
         <ID>
           <String>FIRE INCIDENT</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>g9ixDMO8VdlAfQJ1CtMXuYCLlE0=4/14/2024 3:10:13 PM4/14/2024 2:39:52 PM</TimeStamp>
+        <TimeStamp>FBRe0usrJD5dI8pZWDuKNgIBWNg=4/19/2024 3:46:14 AM4/19/2024 3:46:14 AM</TimeStamp>
         <ID>
           <String>FIRE INCIDENT</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>ATBpRraNgrJpz3WW8MzfC9lxoVE=4/14/2024 3:51:18 PM4/14/2024 3:10:57 PM</TimeStamp>
-        <ID>
-          <String>Dim Location</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>ScWPh749aAnDcuNN6J/9f/v80P4=4/14/2024 3:51:26 PM4/14/2024 3:51:26 PM</TimeStamp>
-        <ID>
-          <String>Dim Station</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>aRNBhOSAhGsiFvc81xPQlRRqRo0=4/14/2024 3:51:34 PM4/14/2024 3:51:34 PM</TimeStamp>
-        <ID>
-          <String>Dim Ignition Cause</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>bSLKzCe6f9Wq/e4MPhFX+9Cbui0=4/14/2024 3:51:44 PM4/14/2024 3:51:44 PM</TimeStamp>
-        <ID>
-          <String>Dim Ignition Factor</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>zl3abG40X6jKHpiuQZyLQBQ9jdc=4/14/2024 3:51:53 PM4/14/2024 3:51:53 PM</TimeStamp>
+        <TimeStamp>AU3mNDwzV2Qx8qRLzAx6JSgi1Vk=4/19/2024 3:51:37 AM4/19/2024 3:51:37 AM</TimeStamp>
         <ID>
           <String>Dim Action</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>dFXqgTP0bViAJVN1xMn9wAYPWOc=4/14/2024 4:54:22 PM4/14/2024 3:52:01 PM</TimeStamp>
+        <TimeStamp>fhMLt/hDcEkot6hkceVPKugG9Vs=4/19/2024 3:53:53 AM4/19/2024 3:53:53 AM</TimeStamp>
         <ID>
-          <String>Dim Time</String>
+          <String>Dim Date</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>vVWhUQ+u7TuxUOZya89b7UanCus=4/14/2024 3:52:11 PM4/14/2024 3:52:11 PM</TimeStamp>
+        <TimeStamp>A7vL/Cv+LB5utJNLkfolsNGGZ+U=4/19/2024 3:54:04 AM4/19/2024 3:54:04 AM</TimeStamp>
         <ID>
           <String>Dim Heat Source</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>JP00rXkEoWgqtND4X5bQQ2Us+Lc=4/14/2024 3:52:20 PM4/14/2024 3:52:20 PM</TimeStamp>
+        <TimeStamp>+20I3KcIA0rPRZFQ9IaHcbRLS/Y=4/19/2024 3:54:46 AM4/19/2024 3:54:46 AM</TimeStamp>
         <ID>
-          <String>Dim Situation</String>
+          <String>Dim Ignition Cause</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>kaIO8CD9A7I1HxLC0Fx52XYr/24=4/14/2024 4:48:49 PM4/14/2024 3:52:30 PM</TimeStamp>
+        <TimeStamp>HJrPzFn/gFhvehWYtmqUFB7BKWE=4/19/2024 3:54:57 AM4/19/2024 3:54:57 AM</TimeStamp>
+        <ID>
+          <String>Dim Ignition Factor</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>vn0h8o6VgbcXrZd5aPVlEkjANBQ=4/19/2024 3:55:07 AM4/19/2024 3:55:07 AM</TimeStamp>
+        <ID>
+          <String>Dim Location</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>u92zQIm0NKeZ7YPWtCckh3xSsSA=4/19/2024 3:55:17 AM4/19/2024 3:55:17 AM</TimeStamp>
         <ID>
           <String>Dim Property</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>/SCPKTOyh+Wg1x+KjofOIW92z1s=4/14/2024 3:52:39 PM4/14/2024 3:52:39 PM</TimeStamp>
+        <TimeStamp>nJgEuouDiYae9nGCgiDVOwdoQeI=4/19/2024 3:55:27 AM4/19/2024 3:55:27 AM</TimeStamp>
+        <ID>
+          <String>Dim Situation</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>JFBJxq4b8ClCwEb0/5RlkaXrsaE=4/19/2024 3:55:37 AM4/19/2024 3:55:37 AM</TimeStamp>
+        <ID>
+          <String>Dim Station</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>XSJepJDL02W/dpfqwa9QR64QDPI=4/19/2024 3:55:53 AM4/19/2024 3:55:53 AM</TimeStamp>
         <ID>
           <String>Dim Structure</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>paroCuMXHfzD5s/cD2dgxuRAd3E=4/14/2024 5:16:54 PM4/14/2024 3:52:50 PM</TimeStamp>
+        <TimeStamp>BrY0Dklz2AVUc4R9Dg+k933ZjMA=4/19/2024 3:56:07 AM4/19/2024 3:56:07 AM</TimeStamp>
         <ID>
-          <String>Dim Date</String>
+          <String>Dim Time</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>wZar0VB1uOFYZ5CuDugu/ji5Fy4=4/14/2024 5:54:10 PM4/14/2024 3:52:59 PMUAFv0/GgTBeEMPjfw2qgGZg/rnY=4/14/2024 3:52:59 PM4/14/2024 3:52:59 PM</TimeStamp>
+        <TimeStamp>ZZMLU74gBrMAqZ58aRGkvADV8bc=4/19/2024 4:37:53 AM4/19/2024 3:57:57 AM+QUBKBU7ubvGb/Uo0CWuBF2EfS0=4/19/2024 3:57:57 AM4/19/2024 3:57:57 AM</TimeStamp>
         <ID>
           <String>FIRE INCIDENT</String>
         </ID>
@@ -118,7 +118,7 @@
     </ObjectSnapshots>
     <DatabaseSnapshot>
       <Type>Microsoft.AnalysisServices.Database</Type>
-      <TimeStamp>3BPZRine94mDw7fPXhP3COWc3O0=4/3/2024 3:14:57 PM4/3/2024 3:14:56 PM</TimeStamp>
+      <TimeStamp>OCSPUbJiAVVl/j89Mzwlpw52iNM=4/19/2024 3:16:08 AM4/19/2024 3:16:08 AM</TimeStamp>
       <ID>
         <String>Fire_Incident_SSAS</String>
       </ID>
@@ -127,5 +127,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2024-04-14T11:03:21.196667Z</LastDeployed>
+  <LastDeployed>2024-04-18T21:38:15.083333Z</LastDeployed>
 </DeploymentSnapshot>

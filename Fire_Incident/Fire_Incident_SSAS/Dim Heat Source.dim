@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8f8dcb9b-6810-4c2d-9412-a21c5670cce8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8b6f7085-cc60-4b87-ab1a-cbe1e4b82ab4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Heat Source</ID>
   <Name>Dim Heat Source</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -42,34 +42,34 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="7b50de1e-1241-4e85-ab9c-bd48ebfe0f87">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b38971d7-1600-4d58-8459-8700337e5225">
     <DataSourceViewID>FIRE INCIDENT</DataSourceViewID>
   </Source>
   <UnknownMember>Visible</UnknownMember>
-  <ErrorConfiguration dwd:design-time-name="f0e45e53-0f7d-4ca6-abc7-6e348b51f414">
+  <ErrorConfiguration dwd:design-time-name="34f3d3ae-0f3f-4ebe-820d-23a03f5da7ca">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="fdb1dfa8-6035-4c2b-8744-d637fe84f58c">
+    <Attribute dwd:design-time-name="55d2853c-6c27-45b1-951d-8ed2deb53ce0">
       <ID>Heat Source ID</ID>
       <Name>Heat Source ID</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="7143f39e-5358-4fae-bd85-f2a16d0d03f6">
+        <KeyColumn dwd:design-time-name="104935ff-e3a7-4dc2-bf04-b74ae047efef">
           <DataType>WChar</DataType>
           <DataSize>4</DataSize>
           <NullProcessing>UnknownMember</NullProcessing>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="0cebfb4f-09b9-4e2a-8500-c45d7f92388e">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3c74301a-3830-4c00-9873-7395eb73cf18">
             <TableID>dbo_Dim_Heat_Source</TableID>
             <ColumnID>Heat_Source_ID</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="b857ac75-fa99-428e-ad22-709cc850fb4d">
+        <AttributeRelationship dwd:design-time-name="96c06fd5-1dd0-4ae0-a0c5-7a834e3207cf">
           <AttributeID>Heat Source Desc</AttributeID>
           <Name>Heat Source Desc</Name>
         </AttributeRelationship>
@@ -78,14 +78,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="51c69697-089e-46e5-8aae-780a4bb1be43">
+    <Attribute dwd:design-time-name="c0e4621a-eede-4332-a68f-ee7e2c8e9fad">
       <ID>Heat Source Desc</ID>
       <Name>Heat Source Desc</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="bea35e1e-c5e1-43d6-88b0-f054d5a0550b">
+        <KeyColumn dwd:design-time-name="4c91f6dd-5f75-4057-bb51-2d4af6a0e58d">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="641c4467-d133-44eb-8e81-5034126ecd8c">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4d01511a-a4d9-40f6-beb4-823ba4c2d6b4">
             <TableID>dbo_Dim_Heat_Source</TableID>
             <ColumnID>Heat_Source_Desc</ColumnID>
           </Source>
