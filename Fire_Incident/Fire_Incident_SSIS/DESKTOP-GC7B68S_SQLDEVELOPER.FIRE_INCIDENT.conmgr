@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-GC7B68S_SQLDEVELOPER.FIRE_INCIDENT"
+  DTS:DTSID="{AE6FD180-A230-4D49-B88E-E75C63246E41}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-GC7B68S\SQLDEVELOPER;Initial Catalog=FIRE_INCIDENT;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Fire_Incident_SSIS-{AE6FD180-A230-4D49-B88E-E75C63246E41}DESKTOP-GC7B68S\SQLDEVELOPER.FIRE_INCIDENT;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

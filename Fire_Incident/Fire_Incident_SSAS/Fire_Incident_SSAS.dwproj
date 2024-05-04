@@ -69,6 +69,10 @@
       <Name>FIRE INCIDENT.ds</Name>
       <FullPath>FIRE INCIDENT.ds</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>FIRE INCIDENT 1.ds</Name>
+      <FullPath>FIRE INCIDENT 1.ds</FullPath>
+    </ProjectItem>
   </DataSources>
   <DataSourceViews>
     <ProjectItem>
@@ -86,11 +90,21 @@
             <Name>FIRE INCIDENT</Name>
             <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=FREDLE09\SQLDEVELOPER;Integrated Security=SSPI;Initial Catalog=FIRE_INCIDENT</Value>
           </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>FIRE INCIDENT 1</Id>
+            <Name>FIRE INCIDENT 1</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-GC7B68S\SQLDEVELOPER;Integrated Security=SSPI;Initial Catalog=FIRE_INCIDENT</Value>
+          </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
           <ConfigurationSetting>
             <Id>FIRE INCIDENT</Id>
             <Name>FIRE INCIDENT</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>FIRE INCIDENT 1</Id>
+            <Name>FIRE INCIDENT 1</Name>
             <Value xsi:type="xsd:int">0</Value>
           </ConfigurationSetting>
         </ConnectionSecurityMappings>

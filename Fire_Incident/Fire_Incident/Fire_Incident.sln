@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Fire_Incident", "Fire_Incident.dwproj", "{38C19985-E717-49A1-AEC1-CD67AE3FF757}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38C19985-E717-49A1-AEC1-CD67AE3FF757}.Development|Default.ActiveCfg = Development
+		{38C19985-E717-49A1-AEC1-CD67AE3FF757}.Development|Default.Build.0 = Development
+		{38C19985-E717-49A1-AEC1-CD67AE3FF757}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C13C478-192D-46BA-971E-E02944E5380D}
+	EndGlobalSection
+EndGlobal

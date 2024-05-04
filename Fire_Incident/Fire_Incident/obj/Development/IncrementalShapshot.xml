@@ -1,0 +1,131 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>FIRE_INCIDENT</Database>
+    <Server>DESKTOP-GC7B68S\SQLDEVELOPER</Server>
+    <ConnectionString>Data Source=DESKTOP-GC7B68S\SQLDEVELOPER;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>EjxwtKZR9dvz57QbHrfo+zzzApw=21-Apr-24 6:10:33 AM21-Apr-24 3:28:04 AM</TimeStamp>
+        <ID>
+          <String>FIRE INCIDENT</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>1xgHT9g5YV3JFH/svOmsbZ59j54=21-Apr-24 3:28:53 AM21-Apr-24 3:28:53 AM</TimeStamp>
+        <ID>
+          <String>FIRE INCIDENT</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>JOJE0s+M/isMJfLLkj75odYNEVo=21-Apr-24 3:30:56 AM21-Apr-24 3:30:56 AM</TimeStamp>
+        <ID>
+          <String>Dim Action</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>IYC2ffJm6tV+N+sdw0pOCZJ2NfU=21-Apr-24 3:31:25 AM21-Apr-24 3:31:25 AM</TimeStamp>
+        <ID>
+          <String>Dim Heat Source</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>9R0rq4E1nED1CPLFCDjRrO6Cr3k=21-Apr-24 3:31:43 AM21-Apr-24 3:31:43 AM</TimeStamp>
+        <ID>
+          <String>Dim Ignition Cause</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>oLxnrxFCTzr3FumuvlNupuzT8SU=21-Apr-24 3:31:55 AM21-Apr-24 3:31:55 AM</TimeStamp>
+        <ID>
+          <String>Dim Ignition Factor</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>eCcYJDPyvI5kohV32HflnYN/oZU=21-Apr-24 6:55:07 PM21-Apr-24 3:32:20 AM</TimeStamp>
+        <ID>
+          <String>Dim Location</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>kXVM1sHFnVhyWjGnt7Hb+1L7+5U=21-Apr-24 9:29:17 AM21-Apr-24 3:33:18 AM</TimeStamp>
+        <ID>
+          <String>Dim Property</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>r4QlFr7Jf4nYmzjMcHDqVxpaMgQ=21-Apr-24 9:29:17 AM21-Apr-24 3:34:46 AM</TimeStamp>
+        <ID>
+          <String>Dim Situation</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>OuRnbrsFYeMDiVWaJf4OiQIEM4I=21-Apr-24 6:55:07 PM21-Apr-24 3:34:58 AM</TimeStamp>
+        <ID>
+          <String>Dim Station</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>4tZARNnSRgv0jAK3Pma/H162+6I=21-Apr-24 3:35:32 AM21-Apr-24 3:35:32 AM</TimeStamp>
+        <ID>
+          <String>Dim Structure</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>n+zPiDf7D+W0CinLnXM/pIqbSbo=21-Apr-24 8:04:57 PM21-Apr-24 8:56:34 AM</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>frb23jerdnMGxKP4N79n5AcIFgM=21-Apr-24 8:02:15 PM21-Apr-24 6:44:48 PM</TimeStamp>
+        <ID>
+          <String>Dim Time</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>c60xkBC1EDiyn9wfbPeXJ2SFM+0=21-Apr-24 9:22:03 PM21-Apr-24 9:22:03 PMF3L2Q3fmcNHst5ajshl42SdPsU0=21-Apr-24 9:22:03 PM21-Apr-24 9:22:03 PM</TimeStamp>
+        <ID>
+          <String>FIRE INCIDENT</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>63p2Q6LyEgh0Xr6vYdZw7oRhYRc=21-Apr-24 3:15:33 AM21-Apr-24 3:15:32 AM</TimeStamp>
+      <ID>
+        <String>FIRE_INCIDENT</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2024-04-21T14:22:47.316667Z</LastDeployed>
+</DeploymentSnapshot>

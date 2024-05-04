@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\le197\\source\\repos\\Fire_Incident\\",
+  "WorkspaceRootPath": "E:\\ASTUDY\\HK6\\OLAP\\IS217.O21.Nemo-Datawarehouse_OLAP-Fire_Incident\\Fire_Incident\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2680B81-332C-498D-BB86-EE79972FCBE0}|Fire_Incident_SSAS\\Fire_Incident_SSAS.dwproj|C:\\Users\\le197\\source\\repos\\Fire_Incident\\Fire_Incident_SSAS\\FIRE INCIDENT.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
-      "RelativeMoniker": "D:0:0:{C2680B81-332C-498D-BB86-EE79972FCBE0}|Fire_Incident_SSAS\\Fire_Incident_SSAS.dwproj|solutionrelative:Fire_Incident_SSAS\\FIRE INCIDENT.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+      "AbsoluteMoniker": "D:0:0:{7B045966-F668-4C42-9C20-5EEFCCBEFEB3}|Fire_Incident_SSAS\\Fire_Incident_SSAS.dwproj|E:\\ASTUDY\\HK6\\OLAP\\IS217.O21.Nemo-Datawarehouse_OLAP-Fire_Incident\\Fire_Incident\\Fire_Incident_SSAS\\FIRE INCIDENT.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{7B045966-F668-4C42-9C20-5EEFCCBEFEB3}|Fire_Incident_SSAS\\Fire_Incident_SSAS.dwproj|solutionrelative:Fire_Incident_SSAS\\FIRE INCIDENT.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B045966-F668-4C42-9C20-5EEFCCBEFEB3}|Fire_Incident_SSAS\\Fire_Incident_SSAS.dwproj|E:\\ASTUDY\\HK6\\OLAP\\IS217.O21.Nemo-Datawarehouse_OLAP-Fire_Incident\\Fire_Incident\\Fire_Incident_SSAS\\FIRE INCIDENT.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{7B045966-F668-4C42-9C20-5EEFCCBEFEB3}|Fire_Incident_SSAS\\Fire_Incident_SSAS.dwproj|solutionrelative:Fire_Incident_SSAS\\FIRE INCIDENT.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 140,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FIRE INCIDENT.dsv [Design]",
+              "DocumentMoniker": "E:\\ASTUDY\\HK6\\OLAP\\IS217.O21.Nemo-Datawarehouse_OLAP-Fire_Incident\\Fire_Incident\\Fire_Incident_SSAS\\FIRE INCIDENT.dsv",
+              "RelativeDocumentMoniker": "Fire_Incident_SSAS\\FIRE INCIDENT.dsv",
+              "ToolTip": "E:\\ASTUDY\\HK6\\OLAP\\IS217.O21.Nemo-Datawarehouse_OLAP-Fire_Incident\\Fire_Incident\\Fire_Incident_SSAS\\FIRE INCIDENT.dsv [Design]",
+              "RelativeToolTip": "Fire_Incident_SSAS\\FIRE INCIDENT.dsv [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-20T20:02:32.992Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FIRE INCIDENT.cube [Design]",
-              "DocumentMoniker": "C:\\Users\\le197\\source\\repos\\Fire_Incident\\Fire_Incident_SSAS\\FIRE INCIDENT.cube",
+              "DocumentMoniker": "E:\\ASTUDY\\HK6\\OLAP\\IS217.O21.Nemo-Datawarehouse_OLAP-Fire_Incident\\Fire_Incident\\Fire_Incident_SSAS\\FIRE INCIDENT.cube",
               "RelativeDocumentMoniker": "Fire_Incident_SSAS\\FIRE INCIDENT.cube",
-              "ToolTip": "C:\\Users\\le197\\source\\repos\\Fire_Incident\\Fire_Incident_SSAS\\FIRE INCIDENT.cube [Design]",
+              "ToolTip": "E:\\ASTUDY\\HK6\\OLAP\\IS217.O21.Nemo-Datawarehouse_OLAP-Fire_Incident\\Fire_Incident\\Fire_Incident_SSAS\\FIRE INCIDENT.cube [Design]",
               "RelativeToolTip": "Fire_Incident_SSAS\\FIRE INCIDENT.cube [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-04-14T11:05:21.415Z",
