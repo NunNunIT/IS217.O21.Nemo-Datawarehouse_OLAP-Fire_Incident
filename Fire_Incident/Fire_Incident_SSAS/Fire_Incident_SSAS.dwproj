@@ -40,16 +40,16 @@
       <FullPath>Dim Ignition Factor.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Location.dim</Name>
-      <FullPath>Dim Location.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Dim Property.dim</Name>
       <FullPath>Dim Property.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Dim Situation.dim</Name>
       <FullPath>Dim Situation.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Location.dim</Name>
+      <FullPath>Dim Location.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Dim Station.dim</Name>

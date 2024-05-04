@@ -27,13 +27,13 @@
         <ID>Dim Ignition Factor</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Location</ID>
-      </Dimension>
-      <Dimension>
         <ID>Dim Property</ID>
       </Dimension>
       <Dimension>
         <ID>Dim Situation</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Location</ID>
       </Dimension>
       <Dimension>
         <ID>Dim Station</ID>

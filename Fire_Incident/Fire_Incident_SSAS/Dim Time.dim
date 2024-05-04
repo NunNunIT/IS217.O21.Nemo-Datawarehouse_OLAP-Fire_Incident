@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0ff91296-56fc-4a1d-9199-31f4fdf4a78b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="edff51aa-ab75-409a-86ad-283133416133" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Time</ID>
   <Name>Dim Time</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -42,46 +42,46 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="eedc1c19-0488-46eb-8868-cf011ac049aa">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b65ffd7b-ad10-4443-8b67-1f65981df5b7">
     <DataSourceViewID>FIRE INCIDENT</DataSourceViewID>
   </Source>
   <UnknownMember>Visible</UnknownMember>
-  <ErrorConfiguration dwd:design-time-name="8869d6d3-504a-465f-a6fd-07c701d28f62">
+  <ErrorConfiguration dwd:design-time-name="f9f534bc-0a99-47f6-9c4c-01910dc98f8e">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="2cde6ee4-920c-4dd0-bd33-0ed39d66f27d">
+    <Attribute dwd:design-time-name="482e2453-5687-433b-af63-53a9e2132d43">
       <ID>Time ID</ID>
       <Name>Time ID</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="66a9ce8b-4122-4eb2-aa98-935716c6702d">
+        <KeyColumn dwd:design-time-name="43e4bf39-f4e8-4e75-9dd8-c979da07b3e2">
           <DataType>WChar</DataType>
           <DataSize>6</DataSize>
           <NullProcessing>UnknownMember</NullProcessing>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="77bc3a60-6584-42c3-ad80-fa69451d6eda">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d35cc9af-97c7-4d2a-8b4e-6f2223d81dc4">
             <TableID>dbo_Dim_Time</TableID>
             <ColumnID>Time_ID</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="4bd2c4f1-935a-4779-acf2-13c552767dab">
+        <AttributeRelationship dwd:design-time-name="10eab531-1401-43b6-b99a-c696a3b86b42">
           <AttributeID>Second</AttributeID>
           <Name>Second</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="3677b147-7cd7-4a0f-8cb5-697c589aa19b">
+        <AttributeRelationship dwd:design-time-name="2f1d73e5-20bf-4f6a-97af-0290f80f38ca">
           <AttributeID>Minute</AttributeID>
           <Name>Minute</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="aec5c8f1-6027-443f-89fc-b21586f0e889">
+        <AttributeRelationship dwd:design-time-name="e9f30095-3b4e-4678-adbc-f6d5e8694a31">
           <AttributeID>Hour</AttributeID>
           <Name>Hour</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="393253c0-dbe7-4b6b-89c1-df1243cba1cb">
+        <AttributeRelationship dwd:design-time-name="7e4704da-69b6-4976-b16e-a210e7506473">
           <AttributeID>Is Night</AttributeID>
           <Name>Is Night</Name>
         </AttributeRelationship>
@@ -90,13 +90,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="efe09750-2a6a-41d1-9b6c-39f5090f41e6">
+    <Attribute dwd:design-time-name="9e658583-3db0-4ad1-bfb3-d668f96270fc">
       <ID>Second</ID>
       <Name>Second</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="3b9ea759-11ed-4ded-8db1-33d132f1a392">
+        <KeyColumn dwd:design-time-name="81ce155e-f136-4191-8179-d1f5512d36db">
           <DataType>SmallInt</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="406fe5d9-1a68-43cc-9754-76e148daae44">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dfc6ec2f-8485-425e-a3c7-87f6e7b83627">
             <TableID>dbo_Dim_Time</TableID>
             <ColumnID>Second</ColumnID>
           </Source>
@@ -106,13 +106,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="664862b6-a2a9-479b-9fca-1f428541080a">
+    <Attribute dwd:design-time-name="b6fb22e9-1173-4523-b1ad-18f3df85dd0c">
       <ID>Minute</ID>
       <Name>Minute</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="ab114f75-6b22-470d-beeb-223fbbf09eed">
+        <KeyColumn dwd:design-time-name="07e22eb6-b983-4136-9307-020be57237cf">
           <DataType>SmallInt</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="5aa93702-2108-429f-a9eb-35c84902f97a">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="16a82924-589b-48b3-98ab-604a8f2fb446">
             <TableID>dbo_Dim_Time</TableID>
             <ColumnID>Minute</ColumnID>
           </Source>
@@ -122,13 +122,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="e2227afe-cc94-49bd-95cc-cd3771fe7e42">
+    <Attribute dwd:design-time-name="0d7c0c4a-e144-41f2-9d33-aca155e146f2">
       <ID>Hour</ID>
       <Name>Hour</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="d5951079-4148-48e3-be5f-d0bfdfe19991">
+        <KeyColumn dwd:design-time-name="7cc1e9af-f408-4695-a112-45587710fb06">
           <DataType>SmallInt</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="449a44eb-7f89-4b47-9102-97dc918cd228">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e55724b4-ac0c-4097-8cac-02f425296b11">
             <TableID>dbo_Dim_Time</TableID>
             <ColumnID>Hour</ColumnID>
           </Source>
@@ -138,13 +138,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="6e9b1bce-fb99-4645-a813-31349983d5f1">
+    <Attribute dwd:design-time-name="eb42f20f-068b-4b05-93e1-58905dfedcd6">
       <ID>Is Night</ID>
       <Name>Is Night</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="858586b1-7e77-45fa-9276-095053a04765">
+        <KeyColumn dwd:design-time-name="74af512c-0629-4371-abde-7fe95d9d6a62">
           <DataType>Boolean</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="d36e34fb-06a3-41ad-b071-c74bdb1ebfb6">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f491352a-5b5d-41f0-8d60-ffcdca69e1f4">
             <TableID>dbo_Dim_Time</TableID>
             <ColumnID>isNight</ColumnID>
           </Source>
