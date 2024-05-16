@@ -1,0 +1,41 @@
+Property_ID
+(DT_STR,4,1252)TOKEN(Property_Use," ",1)
+
+Property_Desc
+(DT_STR,100,1252)SUBSTRING(Property_Use,FINDSTRING(Property_Use," ",1) + 1,LEN(Property_Use) - FINDSTRING(Property_Use," ",1))
+
+Structure_ID
+(DT_STR,4,1252)TOKEN(Structure_Type," ",1)
+
+Structure_Desc
+(DT_STR,100,1252)SUBSTRING(Structure_Type,FINDSTRING(Structure_Type," ",1) + 1,LEN(Structure_Type) - FINDSTRING(Structure_Type," ",1))
+
+Heat_Source_ID
+(DT_STR,4,1252)TOKEN(Heat_Source," ",1)
+
+Heat_Source_Desc
+(DT_STR,100,1252)SUBSTRING(Heat_Source,FINDSTRING(Heat_Source," ",1) + 1,LEN(Heat_Source) - FINDSTRING(Heat_Source," ",1))
+
+Ignition_Factor_Primary_ID
+(DT_STR,4,1252)TOKEN(Ignition_Factor_Primary," ",1)
+
+Ignition_Factor_Primary_Desc
+(DT_STR,100,1252)SUBSTRING(Ignition_Factor_Primary,FINDSTRING(Ignition_Factor_Primary," ",1) + 1,LEN(Ignition_Factor_Primary) - FINDSTRING(Ignition_Factor_Primary," ",1))
+
+Ignition_Factor_Secondary_ID
+(DT_STR,4,1252)TOKEN(Ignition_Factor_Secondary," ",1)
+
+Ignition_Factor_Secondary_Desc
+(DT_STR,100,1252)SUBSTRING(Ignition_Factor_Secondary,FINDSTRING(Ignition_Factor_Secondary," ",1) + 1,LEN(Ignition_Factor_Secondary) - FINDSTRING(Ignition_Factor_Secondary," ",1))
+
+Action_ID
+(DT_STR,4,1252)TOKEN(Action_Taken_Primary," ",1)
+
+Action_Desc
+(DT_STR,100,1252)SUBSTRING(Action_Taken_Primary,FINDSTRING(Action_Taken_Primary," ",1) + 1,LEN(Action_Taken_Primary) - FINDSTRING(Action_Taken_Primary," ",1))
+
+Situation_ID
+(DT_STR,4,1252)TOKEN(Primary_Situation," ",1)
+
+Situation_Desc
+(DT_STR,100,1252)SUBSTRING(Primary_Situation,FINDSTRING(Primary_Situation," ",1) + 1,LEN(Primary_Situation) - FINDSTRING(Primary_Situation," ",1))

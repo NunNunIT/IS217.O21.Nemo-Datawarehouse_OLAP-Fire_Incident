@@ -2,8 +2,8 @@
   <Database>
     <DataSources>
       <DataSource>
-        <ID>FIRE INCIDENT</ID>
-        <ConnectionString>Provider=SQLOLEDB.1;Data Source=FREDLE09\SQLDEVELOPER;Integrated Security=SSPI;Initial Catalog=FIRE_INCIDENT</ConnectionString>
+        <ID>FIRE INCIDENT 1</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=DESKTOP-GC7B68S\SQLDEVELOPER;Integrated Security=SSPI;Initial Catalog=FIRE_INCIDENT</ConnectionString>
         <ImpersonationInfo>
           <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateServiceAccount</ImpersonationMode>
           <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>

@@ -1,0 +1,32 @@
+Incident_Dt_ID
+(DT_STR,8,1252)((DT_STR,4,1252)YEAR(Incident_Date) + RIGHT("0" + (DT_STR,2,1252)MONTH(Incident_Date),2) + RIGHT("0" + (DT_STR,2,1252)DAY(Incident_Date),2))
+
+Alarm_Dt_ID
+(DT_STR,8,1252)((DT_STR,4,1252)YEAR(Alarm_DtTm) + RIGHT("0" + (DT_STR,2,1252)MONTH(Alarm_DtTm),2) + RIGHT("0" + (DT_STR,2,1252)DAY(Alarm_DtTm),2))
+
+Arrival_Dt_ID
+(DT_STR,8,1252)((DT_STR,4,1252)YEAR(Arrival_DtTm) + RIGHT("0" + (DT_STR,2,1252)MONTH(Arrival_DtTm),2) + RIGHT("0" + (DT_STR,2,1252)DAY(Arrival_DtTm),2))
+
+Close_Dt_ID
+(DT_STR,8,1252)((DT_STR,4,1252)YEAR(Close_DtTm) + RIGHT("0" + (DT_STR,2,1252)MONTH(Close_DtTm),2) + RIGHT("0" + (DT_STR,2,1252)DAY(Close_DtTm),2))
+
+Alarm_Tm_ID
+(DT_STR,6,1252)(RIGHT("0" + (DT_STR,2,1252)DATEPART("hh",Alarm_DtTm),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("mi",Alarm_DtTm),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("s",Alarm_DtTm),2))
+
+Arrival_Tm_ID
+(DT_STR,6,1252)(RIGHT("0" + (DT_STR,2,1252)DATEPART("hh",Arrival_DtTm),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("mi",Arrival_DtTm),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("s",Arrival_DtTm),2))
+
+Close_Tm_ID
+(DT_STR,6,1252)(RIGHT("0" + (DT_STR,2,1252)DATEPART("hh",Close_DtTm),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("mi",Close_DtTm),2) + RIGHT("0" + (DT_STR,2,1252)DATEPART("s",Close_DtTm),2))
+
+Incident_Dt
+(DT_DBDATE)Incident_Date
+
+Alarm_Dt
+(DT_DBDATE)Alarm_DtTm
+
+Arrival_Dt
+(DT_DBDATE)Arrival_DtTm
+
+Close_Dt
+(DT_DBDATE)Close_DtTm

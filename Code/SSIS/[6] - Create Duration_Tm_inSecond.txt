@@ -1,0 +1,2 @@
+Duration_Tm_inSecond
+DATEDIFF("second",(DT_DBTIMESTAMP)Arrival_DtTm,(DT_DBTIMESTAMP)Close_DtTm)

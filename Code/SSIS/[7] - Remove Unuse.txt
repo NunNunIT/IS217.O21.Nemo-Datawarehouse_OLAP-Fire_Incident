@@ -1,0 +1,5 @@
+USE FIRE_INCIDENT;
+GO
+
+DELETE FROM [Raw_Fact];
+GO

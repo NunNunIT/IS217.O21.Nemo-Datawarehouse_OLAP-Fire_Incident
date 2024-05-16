@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="73"
-  DTS:VersionGUID="{81F3D635-D2AA-4FEF-AEE9-3670C2635908}">
+  DTS:VersionBuild="84"
+  DTS:VersionGUID="{02EF1CC4-55FC-4B29-9FF1-EE664E908478}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -346,6 +346,308 @@
               DTS:TextQualified="True"
               DTS:ObjectName="Supervisor_District"
               DTS:DTSID="{E0F6ED8B-F0E3-43CF-A1DD-477E0FFB56BF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D35BF352-837E-4A70-AE3F-3508D78A27C8}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\ASTUDY\HK6\OLAP\IS217.O21.Nemo-Datawarehouse_OLAP-Fire_Incident\Preprocessing\Fire_Incidents_after_preprocessing_new.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{9747DDCB-50F5-4117-B798-8676198A620E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Incident_Date"
+              DTS:DTSID="{0FAA2016-8F7A-41AB-8C20-1AAFB6C5CBB9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Alarm_DtTm"
+              DTS:DTSID="{1285049C-D2DE-4E57-BDB8-774299060895}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Arrival_DtTm"
+              DTS:DTSID="{F51EAE5E-4673-4724-87D0-DB354827DD9C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Close_DtTm"
+              DTS:DTSID="{38E2F969-F271-452A-8ECF-96BB6F88B6A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="zipcode"
+              DTS:DTSID="{926B3E03-4175-4444-95BE-03B4BBE41D1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Battalion"
+              DTS:DTSID="{FC3232FB-DF8E-49D9-856E-C23E8E656CA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Station_Area"
+              DTS:DTSID="{757528B9-7628-4B13-8527-D9F4C7202DB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Suppression_Units"
+              DTS:DTSID="{65F5A3C6-3F88-4CA2-BEFB-D1740813C081}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Suppression_Personnel"
+              DTS:DTSID="{7917B8BE-638C-4758-913F-28F0001FA676}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EMS_Units"
+              DTS:DTSID="{7741464E-15E7-458B-BF26-0983C700AD1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EMS_Personnel"
+              DTS:DTSID="{892165A0-1322-4605-BB98-215A247099D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Other_Units"
+              DTS:DTSID="{D6F90F99-6E94-426E-984A-5390F3BFF3BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Other_Personnel"
+              DTS:DTSID="{CFF169F5-666F-4D10-999F-1A162E03C152}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Estimated_Property_Loss"
+              DTS:DTSID="{15A602CD-3728-48D8-AD65-DDCED8D26907}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Estimated_Contents_Loss"
+              DTS:DTSID="{CB173628-450E-489E-A478-02625713D700}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fire_Fatalities"
+              DTS:DTSID="{E14D6B8D-2913-4590-8797-614D0D0CC20C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fire_Injuries"
+              DTS:DTSID="{8447EAF5-B5DB-4C81-8BB1-521E94F1920C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Civilian_Fatalities"
+              DTS:DTSID="{74DFAD15-16DF-4D8B-9CB4-865BF7D85F07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Civilian_Injuries"
+              DTS:DTSID="{BB9E6430-EE8A-4931-BF34-2084C23A9222}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_Alarms"
+              DTS:DTSID="{DBD8759E-05E2-4DCE-8BCB-59E3E30DE873}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="54"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Primary_Situation"
+              DTS:DTSID="{B94D8D8F-A528-45A5-898A-70208DE18C53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="53"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Action_Taken_Primary"
+              DTS:DTSID="{ED500CD9-9010-402B-9164-2C0F715176AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="54"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Property_Use"
+              DTS:DTSID="{99DDDDBA-C5CA-463F-B811-6DEC6705169F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="51"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ignition_Cause"
+              DTS:DTSID="{115E5CC4-5B97-400A-8FEE-86BC9CA823AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="52"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ignition_Factor_Primary"
+              DTS:DTSID="{4B65714E-0C07-4EAC-95F8-0C0DA137BDFF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="49"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ignition_Factor_Secondary"
+              DTS:DTSID="{E11E198F-50DD-4F9D-8C4F-885324156C3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="57"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Heat_Source"
+              DTS:DTSID="{6B3B92AD-DADF-4320-985F-A47EFF12A0A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="36"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Structure_Type"
+              DTS:DTSID="{179B4096-402C-4118-9BA6-CA3A65CC333E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_floors_with_minimum_damage"
+              DTS:DTSID="{5AA7BF52-E4F6-403D-9A66-8D8E9886F610}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_floors_with_significant_damage"
+              DTS:DTSID="{4D87858B-99F2-4FB3-8289-D527F48F23E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_floors_with_heavy_damage"
+              DTS:DTSID="{4F78C030-81E6-4536-8C6B-521A95BBC6BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_floors_with_extreme_damage"
+              DTS:DTSID="{C5669EAD-6AB6-4715-874E-5BF70DD92DE0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Supervisor_District"
+              DTS:DTSID="{D15E3938-3E78-4897-AE92-0218D812C2AD}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -713,7 +1015,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4DC755D6-CFC9-4E0F-8A82-1B667B6C230C}"
-              SQLTask:SqlStatementSource="USE FIRE_INCIDENT;&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Ignition_Cause] (&#xA;  [Ignition_Cause_ID] varchar(4) PRIMARY KEY,&#xA;  [Ignition_Cause_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Ignition_Factor] (&#xA;  [Ignition_Factor_ID] varchar(4) PRIMARY KEY,&#xA;  [Ignition_Factor_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Heat_Source] (&#xA;  [Heat_Source_ID] varchar(4) PRIMARY KEY,&#xA;  [Heat_Source_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Action] (&#xA;  [Action_ID] varchar(4) PRIMARY KEY,&#xA;  [Action_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Property] (&#xA;  [Property_ID] varchar(4) PRIMARY KEY,&#xA;  [Property_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Structure] (&#xA;  [Structure_ID] varchar(4) PRIMARY KEY,&#xA;  [Structure_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Location] (&#xA;  [Location_ID] int identity(1, 1) PRIMARY KEY,&#xA;  [Zipcode] varchar(10),&#xA;  [Supervisor_District] smallint,&#xA;  [City] varchar(35)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Station] (&#xA;  [Station_ID] int identity(1, 1) PRIMARY KEY,&#xA;  [Station_Area] char(2),&#xA;  [Battalion] char(3)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Situation] (&#xA;  [Situation_ID] varchar(4) PRIMARY KEY,&#xA;  [Situation_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Time] (&#xA;  [Time_ID] varchar(6) PRIMARY KEY,&#xA;  [Second] smallint,&#xA;  [Minute] smallint,&#xA;  [Hour] smallint,&#xA;  [isNight] BIT&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Date] (&#xA;  [Date_ID] varchar(8) primary key,&#xA;  [Day_of_Week] smallint,&#xA;  [Day_Name] varchar(15),&#xA;  [Day_of_Month] smallint,&#xA;  [Day_of_Year] smallint,&#xA;  [Month_of_Year] smallint,&#xA;  [Month_Name] varchar(15),&#xA;  [Year] smallint,&#xA;  [isLeapYear] bit,&#xA;  [Quarter] smallint,&#xA;  [Quarter_Name] varchar(15),&#xA;  [Week_of_Year] smallint,&#xA;  [isWeekend] bit&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Raw_Fact] (&#xA;  [Fact_ID] int PRIMARY KEY,&#xA;  [City] varchar(35),&#xA;  [zipcode] varchar(10),&#xA;  [Battalion] varchar(3),&#xA;  [Station_Area] varchar(2),&#xA;  [Suppression_Units] decimal(28,0),&#xA;  [Suppression_Personnel] decimal(28,0),&#xA;  [EMS_Units] decimal(28,0),&#xA;  [EMS_Personnel] decimal(28,0),&#xA;  [Other_Units] decimal(28,0),&#xA;  [Other_Personnel] decimal(28,0),&#xA;  [Estimated_Property_Loss] decimal(28,0),&#xA;  [Estimated_Contents_Loss] decimal(28,0),&#xA;  [Fire_Fatalities] smallint,&#xA;  [Fire_Injuries] smallint,&#xA;  [Civilian_Fatalities] smallint,&#xA;  [Civilian_Injuries] smallint,&#xA;  [Number_of_Alarms] smallint,&#xA;  [Number_of_floors_with_minimum_damage] decimal(28,0),&#xA;  [Number_of_floors_with_significant_damage] decimal(28,0),&#xA;  [Number_of_floors_with_heavy_damage] decimal(28,0),&#xA;  [Number_of_floors_with_extreme_damage] decimal(28,0),&#xA;  [Supervisor_District] smallint,&#xA;  [Property_ID] varchar(4),&#xA;  [Property_Desc] varchar(100),&#xA;  [Structure_ID] varchar(4),&#xA;  [Structure_Desc] varchar(100),&#xA;  [Heat_Source_ID] varchar(4),&#xA;  [Heat_Source_Desc] varchar(100),&#xA;  [Ignition_Factor_Primary_ID] varchar(4),&#xA;  [Ignition_Factor_Primary_Desc] varchar(100),&#xA;  [Ignition_Factor_Secondary_ID] varchar(4),&#xA;  [Ignition_Factor_Secondary_Desc] varchar(100),&#xA;  [Ignition_Cause_ID] varchar(4),&#xA;  [Ignition_Cause_Desc] varchar(100),&#xA;  [Action_ID] varchar(4),&#xA;  [Action_Desc] varchar(100),&#xA;  [Situation_ID] varchar(4),&#xA;  [Situation_Desc] varchar(100),&#xA;  [Incident_Dt_ID] varchar(8),&#xA;  [Incident_Dt] DATE,&#xA;  [Alarm_Dt_ID] varchar(8),&#xA;  [Alarm_Dt] DATE,&#xA;  [Arrival_Dt_ID] varchar(8),&#xA;  [Arrival_Dt] DATE,&#xA;  [Close_Dt_ID] varchar(8),&#xA;  [Close_Dt] DATE,&#xA;  [Alarm_Tm_ID] varchar(6),&#xA;  [Arrival_Tm_ID] varchar(6),&#xA;  [Close_Tm_ID] varchar(6),&#xA;  [Duration_Tm_inSecond] int&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Fact] (&#xA;  [Fact_ID] int primary key,&#xA;  [Property_ID] varchar(4),&#xA;  [Structure_ID] varchar(4),&#xA;  [Heat_Source_ID] varchar(4),&#xA;  [Ignition_Factor_Primary_ID] varchar(4),&#xA;  [Ignition_Factor_Secondary_ID] varchar(4),&#xA;  [Ignition_Cause_ID] varchar(4),&#xA;  [Action_ID] varchar(4),&#xA;  [Situation_ID] varchar(4),&#xA;  [Incident_Dt_ID] varchar(8),&#xA;  [Alarm_Dt_ID] varchar(8),&#xA;  [Arrival_Dt_ID] varchar(8),&#xA;  [Close_Dt_ID] varchar(8),&#xA;  [Alarm_Tm_ID] varchar(6),&#xA;  [Arrival_Tm_ID] varchar(6),&#xA;  [Close_Tm_ID] varchar(6),&#xA;  [Station_ID] int,&#xA;  [Location_ID] int,&#xA;  [Suppression_Units] numeric(28,0),&#xA;  [Suppression_Personnel] numeric(28,0),&#xA;  [EMS_Units] numeric(28,0),&#xA;  [EMS_Personnel] numeric(28,0),&#xA;  [Other_Units] numeric(28,0),&#xA;  [Other_Personnel] numeric(28,0),&#xA;  [Estimated_Property_Loss] numeric(28,0),&#xA;  [Estimated_Contents_Loss] numeric(28,0),&#xA;  [Fire_Fatalities] smallint,&#xA;  [Fire_Injuries] smallint,&#xA;  [Civilian_Fatalities] smallint,&#xA;  [Civilian_Injuries] smallint,&#xA;  [Number_of_Alarms] smallint,&#xA;  [Number_of_floors_with_minimum_damage] numeric(28,0),&#xA;  [Number_of_floors_with_significant_damage] numeric(28,0),&#xA;  [Number_of_floors_with_heavy_damage] numeric(28,0),&#xA;  [Number_of_floors_with_extreme_damage] numeric(28,0),&#xA;  [Duration_Tm_inSecond] int,&#xA;  FOREIGN KEY ([Property_ID]) REFERENCES [Dim_Property] ([Property_ID]),&#xA;  FOREIGN KEY ([Structure_ID]) REFERENCES [Dim_Structure] ([Structure_ID]),&#xA;  FOREIGN KEY ([Heat_Source_ID]) REFERENCES [Dim_Heat_Source] ([Heat_Source_ID]),&#xA;  FOREIGN KEY ([Ignition_Factor_Primary_ID]) REFERENCES [Dim_Ignition_Factor] ([Ignition_Factor_ID]),&#xA;  FOREIGN KEY ([Ignition_Factor_Secondary_ID]) REFERENCES [Dim_Ignition_Factor] ([Ignition_Factor_ID]),&#xA;  FOREIGN KEY ([Ignition_Cause_ID]) REFERENCES [Dim_Ignition_Cause] ([Ignition_Cause_ID]),&#xA;  FOREIGN KEY ([Action_ID]) REFERENCES [Dim_Action] ([Action_ID]),&#xA;  FOREIGN KEY ([Situation_ID]) REFERENCES [Dim_Situation] ([Situation_ID]),&#xA;  FOREIGN KEY ([Incident_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),&#xA;  FOREIGN KEY ([Alarm_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),&#xA;  FOREIGN KEY ([Arrival_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),&#xA;  FOREIGN KEY ([Close_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),&#xA;  FOREIGN KEY ([Alarm_Tm_ID]) REFERENCES [Dim_Time] ([Time_ID]),&#xA;  FOREIGN KEY ([Arrival_Tm_ID]) REFERENCES [Dim_Time] ([Time_ID]),&#xA;  FOREIGN KEY ([Close_Tm_ID]) REFERENCES [Dim_Time] ([Time_ID]),&#xA;  FOREIGN KEY ([Station_ID]) REFERENCES [Dim_Station] ([Station_ID]),&#xA;  FOREIGN KEY ([Location_ID]) REFERENCES [Dim_Location] ([Location_ID])&#xA;)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="USE FIRE_INCIDENT;&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Ignition_Cause] (&#xA;  [Ignition_Cause_ID] varchar(4) PRIMARY KEY,&#xA;  [Ignition_Cause_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Ignition_Factor] (&#xA;  [Ignition_Factor_ID] varchar(4) PRIMARY KEY,&#xA;  [Ignition_Factor_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Heat_Source] (&#xA;  [Heat_Source_ID] varchar(4) PRIMARY KEY,&#xA;  [Heat_Source_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Action] (&#xA;  [Action_ID] varchar(4) PRIMARY KEY,&#xA;  [Action_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Property] (&#xA;  [Property_ID] varchar(4) PRIMARY KEY,&#xA;  [Property_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Structure] (&#xA;  [Structure_ID] varchar(4) PRIMARY KEY,&#xA;  [Structure_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Location] (&#xA;  [Location_ID] int identity(1, 1) PRIMARY KEY,&#xA;  [Zipcode] varchar(10),&#xA;  [Supervisor_District] smallint,&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Station] (&#xA;  [Station_ID] int identity(1, 1) PRIMARY KEY,&#xA;  [Station_Area] char(2),&#xA;  [Battalion] char(3)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Situation] (&#xA;  [Situation_ID] varchar(4) PRIMARY KEY,&#xA;  [Situation_Desc] varchar(100)&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Time] (&#xA;  [Time_ID] varchar(6) PRIMARY KEY,&#xA;  [Second] smallint,&#xA;  [Minute] smallint,&#xA;  [Hour] smallint,&#xA;  [isNight] BIT&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Dim_Date] (&#xA;  [Date_ID] varchar(8) primary key,&#xA;  [Day_of_Week] smallint,&#xA;  [Day_Name] varchar(15),&#xA;  [isWeekend] bit,&#xA;  [Day_of_Month] smallint,&#xA;  [Month_of_Year] smallint,&#xA;  [Month_Name] varchar(15),&#xA;  [Quarter] smallint,&#xA;  [Quarter_Name] varchar(15),&#xA;  [Year] smallint,&#xA;  [isLeapYear] bit&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Raw_Fact] (&#xA;  [Fact_ID] int PRIMARY KEY,&#xA;  [City] varchar(35),&#xA;  [zipcode] varchar(10),&#xA;  [Battalion] varchar(3),&#xA;  [Station_Area] varchar(2),&#xA;  [Suppression_Units] decimal(28,0),&#xA;  [Suppression_Personnel] decimal(28,0),&#xA;  [EMS_Units] decimal(28,0),&#xA;  [EMS_Personnel] decimal(28,0),&#xA;  [Other_Units] decimal(28,0),&#xA;  [Other_Personnel] decimal(28,0),&#xA;  [Estimated_Property_Loss] decimal(28,0),&#xA;  [Estimated_Contents_Loss] decimal(28,0),&#xA;  [Fire_Fatalities] smallint,&#xA;  [Fire_Injuries] smallint,&#xA;  [Civilian_Fatalities] smallint,&#xA;  [Civilian_Injuries] smallint,&#xA;  [Number_of_Alarms] smallint,&#xA;  [Number_of_floors_with_minimum_damage] decimal(28,0),&#xA;  [Number_of_floors_with_significant_damage] decimal(28,0),&#xA;  [Number_of_floors_with_heavy_damage] decimal(28,0),&#xA;  [Number_of_floors_with_extreme_damage] decimal(28,0),&#xA;  [Supervisor_District] smallint,&#xA;  [Property_ID] varchar(4),&#xA;  [Property_Desc] varchar(100),&#xA;  [Structure_ID] varchar(4),&#xA;  [Structure_Desc] varchar(100),&#xA;  [Heat_Source_ID] varchar(4),&#xA;  [Heat_Source_Desc] varchar(100),&#xA;  [Ignition_Factor_Primary_ID] varchar(4),&#xA;  [Ignition_Factor_Primary_Desc] varchar(100),&#xA;  [Ignition_Factor_Secondary_ID] varchar(4),&#xA;  [Ignition_Factor_Secondary_Desc] varchar(100),&#xA;  [Ignition_Cause_ID] varchar(4),&#xA;  [Ignition_Cause_Desc] varchar(100),&#xA;  [Action_ID] varchar(4),&#xA;  [Action_Desc] varchar(100),&#xA;  [Situation_ID] varchar(4),&#xA;  [Situation_Desc] varchar(100),&#xA;  [Incident_Dt_ID] varchar(8),&#xA;  [Incident_Dt] DATE,&#xA;  [Alarm_Dt_ID] varchar(8),&#xA;  [Alarm_Dt] DATE,&#xA;  [Arrival_Dt_ID] varchar(8),&#xA;  [Arrival_Dt] DATE,&#xA;  [Close_Dt_ID] varchar(8),&#xA;  [Close_Dt] DATE,&#xA;  [Alarm_Tm_ID] varchar(6),&#xA;  [Arrival_Tm_ID] varchar(6),&#xA;  [Close_Tm_ID] varchar(6),&#xA;  [Duration_Tm_inSecond] int&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [Fact] (&#xA;  [Fact_ID] int primary key,&#xA;  [Property_ID] varchar(4),&#xA;  [Structure_ID] varchar(4),&#xA;  [Heat_Source_ID] varchar(4),&#xA;  [Ignition_Factor_Primary_ID] varchar(4),&#xA;  [Ignition_Factor_Secondary_ID] varchar(4),&#xA;  [Ignition_Cause_ID] varchar(4),&#xA;  [Action_ID] varchar(4),&#xA;  [Situation_ID] varchar(4),&#xA;  [Incident_Dt_ID] varchar(8),&#xA;  [Alarm_Dt_ID] varchar(8),&#xA;  [Arrival_Dt_ID] varchar(8),&#xA;  [Close_Dt_ID] varchar(8),&#xA;  [Alarm_Tm_ID] varchar(6),&#xA;  [Arrival_Tm_ID] varchar(6),&#xA;  [Close_Tm_ID] varchar(6),&#xA;  [Station_ID] int,&#xA;  [Location_ID] int,&#xA;  [Suppression_Units] numeric(28,0),&#xA;  [Suppression_Personnel] numeric(28,0),&#xA;  [EMS_Units] numeric(28,0),&#xA;  [EMS_Personnel] numeric(28,0),&#xA;  [Other_Units] numeric(28,0),&#xA;  [Other_Personnel] numeric(28,0),&#xA;  [Estimated_Property_Loss] numeric(28,0),&#xA;  [Estimated_Contents_Loss] numeric(28,0),&#xA;  [Fire_Fatalities] smallint,&#xA;  [Fire_Injuries] smallint,&#xA;  [Civilian_Fatalities] smallint,&#xA;  [Civilian_Injuries] smallint,&#xA;  [Number_of_Alarms] smallint,&#xA;  [Number_of_floors_with_minimum_damage] numeric(28,0),&#xA;  [Number_of_floors_with_significant_damage] numeric(28,0),&#xA;  [Number_of_floors_with_heavy_damage] numeric(28,0),&#xA;  [Number_of_floors_with_extreme_damage] numeric(28,0),&#xA;  [Duration_Tm_inSecond] int,&#xA;  FOREIGN KEY ([Property_ID]) REFERENCES [Dim_Property] ([Property_ID]),&#xA;  FOREIGN KEY ([Structure_ID]) REFERENCES [Dim_Structure] ([Structure_ID]),&#xA;  FOREIGN KEY ([Heat_Source_ID]) REFERENCES [Dim_Heat_Source] ([Heat_Source_ID]),&#xA;  FOREIGN KEY ([Ignition_Factor_Primary_ID]) REFERENCES [Dim_Ignition_Factor] ([Ignition_Factor_ID]),&#xA;  FOREIGN KEY ([Ignition_Factor_Secondary_ID]) REFERENCES [Dim_Ignition_Factor] ([Ignition_Factor_ID]),&#xA;  FOREIGN KEY ([Ignition_Cause_ID]) REFERENCES [Dim_Ignition_Cause] ([Ignition_Cause_ID]),&#xA;  FOREIGN KEY ([Action_ID]) REFERENCES [Dim_Action] ([Action_ID]),&#xA;  FOREIGN KEY ([Situation_ID]) REFERENCES [Dim_Situation] ([Situation_ID]),&#xA;  FOREIGN KEY ([Incident_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),&#xA;  FOREIGN KEY ([Alarm_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),&#xA;  FOREIGN KEY ([Arrival_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),&#xA;  FOREIGN KEY ([Close_Dt_ID]) REFERENCES [Dim_Date] ([Date_ID]),&#xA;  FOREIGN KEY ([Alarm_Tm_ID]) REFERENCES [Dim_Time] ([Time_ID]),&#xA;  FOREIGN KEY ([Arrival_Tm_ID]) REFERENCES [Dim_Time] ([Time_ID]),&#xA;  FOREIGN KEY ([Close_Tm_ID]) REFERENCES [Dim_Time] ([Time_ID]),&#xA;  FOREIGN KEY ([Station_ID]) REFERENCES [Dim_Station] ([Station_ID]),&#xA;  FOREIGN KEY ([Location_ID]) REFERENCES [Dim_Location] ([Location_ID])&#xA;)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -1698,8 +2000,8 @@
                   <connections>
                     <connection
                       refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[Raw CSV]"
-                      connectionManagerRefId="Package.ConnectionManagers[Raw CSV]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
                       name="FlatFileConnection" />
                   </connections>
                   <outputs>
@@ -1801,28 +2103,6 @@
                               dataType="System.Boolean"
                               description="Indicates whether the column uses the faster, locale-neutral parsing routines."
                               name="FastParse">true</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the data is in binary format."
-                              name="UseBinaryFormat">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
-                          codePage="1252"
-                          dataType="str"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="IgnoreFailure"
-                          externalMetadataColumnId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
-                          length="35"
-                          lineageId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
-                          name="City"
-                          truncationRowDisposition="IgnoreFailure">
-                          <properties>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
                             <property
                               dataType="System.Boolean"
                               description="Indicates whether the data is in binary format."
@@ -2436,213 +2716,159 @@
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i4"
                           name="ID" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Incident_Date]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="date"
                           name="Incident_Date" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Alarm_DtTm]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="date"
                           name="Alarm_DtTm" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Arrival_DtTm]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="date"
                           name="Arrival_DtTm" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Close_DtTm]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="date"
                           name="Close_DtTm" />
                         <externalMetadataColumn
-                          refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
-                          name="City" />
-                        <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[zipcode]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i4"
                           name="zipcode" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Battalion]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="3"
                           name="Battalion" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Station_Area]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="2"
                           name="Station_Area" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Suppression_Units]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i2"
                           name="Suppression_Units" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Suppression_Personnel]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i2"
                           name="Suppression_Personnel" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[EMS_Units]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i1"
                           name="EMS_Units" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[EMS_Personnel]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i1"
                           name="EMS_Personnel" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Other_Units]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i1"
                           name="Other_Units" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Other_Personnel]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i1"
                           name="Other_Personnel" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Estimated_Property_Loss]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Estimated_Property_Loss" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Estimated_Contents_Loss]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Estimated_Contents_Loss" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Fire_Fatalities]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i1"
                           name="Fire_Fatalities" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Fire_Injuries]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i1"
                           name="Fire_Injuries" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Civilian_Fatalities]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i1"
                           name="Civilian_Fatalities" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Civilian_Injuries]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i1"
                           name="Civilian_Injuries" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_Alarms]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i1"
                           name="Number_of_Alarms" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Primary_Situation]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="54"
                           name="Primary_Situation" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Action_Taken_Primary]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="53"
                           name="Action_Taken_Primary" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Property_Use]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="54"
                           name="Property_Use" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ignition_Cause]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="51"
                           name="Ignition_Cause" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ignition_Factor_Primary]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="52"
                           name="Ignition_Factor_Primary" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ignition_Factor_Secondary]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="49"
                           name="Ignition_Factor_Secondary" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Heat_Source]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="57"
                           name="Heat_Source" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Structure_Type]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="36"
                           name="Structure_Type" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_floors_with_minimum_damage]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Number_of_floors_with_minimum_damage" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_floors_with_significant_damage]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Number_of_floors_with_significant_damage" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_floors_with_heavy_damage]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Number_of_floors_with_heavy_damage" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_floors_with_extreme_damage]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Number_of_floors_with_extreme_damage" />
                         <externalMetadataColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Supervisor_District]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Supervisor_District" />
                       </externalMetadataColumns>
                     </output>
@@ -2747,14 +2973,6 @@
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
-                        <inputColumn
-                          refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Raw_Fact.Inputs[OLE DB Destination Input].Columns[City]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="35"
-                          cachedName="City"
-                          externalMetadataColumnId="Package\Create Raw_Fact\Raw_Fact DataFlow\Raw_Fact.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                          lineageId="Package\Create Raw_Fact\Raw_Fact DataFlow\Flat File Source.Outputs[Flat File Source Output].Columns[City]" />
                         <inputColumn
                           refId="Package\Create Raw_Fact\Raw_Fact DataFlow\Raw_Fact.Inputs[OLE DB Destination Input].Columns[zipcode]"
                           cachedCodepage="1252"
@@ -3579,17 +3797,6 @@
                           lineageId="Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Output].Columns[Supervisor_District]"
                           name="Supervisor_District"
                           truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Output].Columns[City]"
-                          codePage="1252"
-                          dataType="str"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Output].ExternalColumns[City]"
-                          length="35"
-                          lineageId="Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Output].Columns[City]"
-                          name="City"
-                          truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -3607,12 +3814,6 @@
                           refId="Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Output].ExternalColumns[Supervisor_District]"
                           dataType="i2"
                           name="Supervisor_District" />
-                        <externalMetadataColumn
-                          refId="Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Output].ExternalColumns[City]"
-                          codePage="1252"
-                          dataType="str"
-                          length="35"
-                          name="City" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -3637,13 +3838,6 @@
                           dataType="i2"
                           lineageId="Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Error Output].Columns[Supervisor_District]"
                           name="Supervisor_District" />
-                        <outputColumn
-                          refId="Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Error Output].Columns[City]"
-                          codePage="1252"
-                          dataType="str"
-                          length="35"
-                          lineageId="Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Error Output].Columns[City]"
-                          name="City" />
                         <outputColumn
                           refId="Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
@@ -4378,7 +4572,7 @@
                     <property
                       dataType="System.Int32"
                       description="Specifies the number of columns in the ordering key."
-                      name="NumKeyColumns">3</property>
+                      name="NumKeyColumns">2</property>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the null values are treated as equal values."
@@ -4395,26 +4589,18 @@
                       name="Merge Join Left Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Location.Inputs[Merge Join Left Input].Columns[City]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="35"
-                          cachedName="City"
-                          cachedSortKeyPosition="1"
-                          lineageId="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Location.Outputs[Sort Output].Columns[City]" />
-                        <inputColumn
                           refId="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Location.Inputs[Merge Join Left Input].Columns[zipcode]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="10"
                           cachedName="zipcode"
-                          cachedSortKeyPosition="3"
+                          cachedSortKeyPosition="2"
                           lineageId="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Location.Outputs[Sort Output].Columns[zipcode]" />
                         <inputColumn
                           refId="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Location.Inputs[Merge Join Left Input].Columns[Supervisor_District]"
                           cachedDataType="i2"
                           cachedName="Supervisor_District"
-                          cachedSortKeyPosition="2"
+                          cachedSortKeyPosition="1"
                           lineageId="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Location.Outputs[Sort Output].Columns[Supervisor_District]" />
                         <inputColumn
                           refId="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Location.Inputs[Merge Join Left Input].Columns[Fact_ID]"
@@ -4647,22 +4833,14 @@
                           cachedDataType="str"
                           cachedLength="10"
                           cachedName="Zipcode"
-                          cachedSortKeyPosition="3"
+                          cachedSortKeyPosition="2"
                           lineageId="Package\Load Fact Table\Load Fact Table\Sort Location.Outputs[Sort Output].Columns[Zipcode]" />
                         <inputColumn
                           refId="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Location.Inputs[Merge Join Right Input].Columns[Supervisor_District]"
                           cachedDataType="i2"
                           cachedName="Supervisor_District"
-                          cachedSortKeyPosition="2"
-                          lineageId="Package\Load Fact Table\Load Fact Table\Sort Location.Outputs[Sort Output].Columns[Supervisor_District]" />
-                        <inputColumn
-                          refId="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Location.Inputs[Merge Join Right Input].Columns[City]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="35"
-                          cachedName="City"
                           cachedSortKeyPosition="1"
-                          lineageId="Package\Load Fact Table\Load Fact Table\Sort Location.Outputs[Sort Output].Columns[City]" />
+                          lineageId="Package\Load Fact Table\Load Fact Table\Sort Location.Outputs[Sort Output].Columns[Supervisor_District]" />
                         <inputColumn
                           refId="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Location.Inputs[Merge Join Right Input].Columns[Location_ID]"
                           cachedDataType="i4"
@@ -5246,13 +5424,6 @@
                           cachedName="Fact_ID"
                           lineageId="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Station.Outputs[Sort Output].Columns[Fact_ID]" />
                         <inputColumn
-                          refId="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Station.Inputs[Merge Join Left Input].Columns[City]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="35"
-                          cachedName="City"
-                          lineageId="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Station.Outputs[Sort Output].Columns[City]" />
-                        <inputColumn
                           refId="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Station.Inputs[Merge Join Left Input].Columns[zipcode]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -5520,21 +5691,6 @@
                               dataType="System.Int32"
                               description="The input column associated with this output column"
                               name="InputColumnID">#{Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Station.Inputs[Merge Join Left Input].Columns[Fact_ID]}</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Station.Outputs[Merge Join Output].Columns[City]"
-                          codePage="1252"
-                          dataType="str"
-                          length="35"
-                          lineageId="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Station.Outputs[Merge Join Output].Columns[City]"
-                          name="City">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="The input column associated with this output column"
-                              name="InputColumnID">#{Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Station.Inputs[Merge Join Left Input].Columns[City]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -7316,7 +7472,7 @@
                             <property
                               dataType="System.Int32"
                               description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">3</property>
+                              name="NewSortKeyPosition">2</property>
                           </properties>
                         </inputColumn>
                         <inputColumn
@@ -7324,24 +7480,6 @@
                           cachedDataType="i2"
                           cachedName="Supervisor_District"
                           lineageId="Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Output].Columns[Supervisor_District]">
-                          <properties>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the comparison options for character data."
-                              name="NewComparisonFlags">0</property>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">2</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Load Fact Table\Load Fact Table\Sort Location.Inputs[Sort Input].Columns[City]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="35"
-                          cachedName="City"
-                          lineageId="Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Output].Columns[City]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -7383,7 +7521,7 @@
                           length="10"
                           lineageId="Package\Load Fact Table\Load Fact Table\Sort Location.Outputs[Sort Output].Columns[Zipcode]"
                           name="Zipcode"
-                          sortKeyPosition="3">
+                          sortKeyPosition="2">
                           <properties>
                             <property
                               containsID="true"
@@ -7397,29 +7535,13 @@
                           dataType="i2"
                           lineageId="Package\Load Fact Table\Load Fact Table\Sort Location.Outputs[Sort Output].Columns[Supervisor_District]"
                           name="Supervisor_District"
-                          sortKeyPosition="2">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Output].Columns[Supervisor_District]}</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Load Fact Table\Load Fact Table\Sort Location.Outputs[Sort Output].Columns[City]"
-                          codePage="1252"
-                          dataType="str"
-                          length="35"
-                          lineageId="Package\Load Fact Table\Load Fact Table\Sort Location.Outputs[Sort Output].Columns[City]"
-                          name="City"
                           sortKeyPosition="1">
                           <properties>
                             <property
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Output].Columns[City]}</property>
+                              name="SortColumnId">#{Package\Load Fact Table\Load Fact Table\Dim_Location.Outputs[OLE DB Source Output].Columns[Supervisor_District]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -7467,24 +7589,6 @@
                           </properties>
                         </inputColumn>
                         <inputColumn
-                          refId="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Location.Inputs[Sort Input].Columns[City]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="35"
-                          cachedName="City"
-                          lineageId="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Station.Outputs[Merge Join Output].Columns[City]">
-                          <properties>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the comparison options for character data."
-                              name="NewComparisonFlags">0</property>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">1</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
                           refId="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Location.Inputs[Sort Input].Columns[zipcode]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -7499,7 +7603,7 @@
                             <property
                               dataType="System.Int32"
                               description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">3</property>
+                              name="NewSortKeyPosition">2</property>
                           </properties>
                         </inputColumn>
                         <inputColumn
@@ -7799,7 +7903,7 @@
                             <property
                               dataType="System.Int32"
                               description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">2</property>
+                              name="NewSortKeyPosition">1</property>
                           </properties>
                         </inputColumn>
                         <inputColumn
@@ -8128,29 +8232,13 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Location.Outputs[Sort Output].Columns[City]"
-                          codePage="1252"
-                          dataType="str"
-                          length="35"
-                          lineageId="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Location.Outputs[Sort Output].Columns[City]"
-                          name="City"
-                          sortKeyPosition="1">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Station.Outputs[Merge Join Output].Columns[City]}</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
                           refId="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Location.Outputs[Sort Output].Columns[zipcode]"
                           codePage="1252"
                           dataType="str"
                           length="10"
                           lineageId="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Location.Outputs[Sort Output].Columns[zipcode]"
                           name="zipcode"
-                          sortKeyPosition="3">
+                          sortKeyPosition="2">
                           <properties>
                             <property
                               containsID="true"
@@ -8397,7 +8485,7 @@
                           dataType="i2"
                           lineageId="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Location.Outputs[Sort Output].Columns[Supervisor_District]"
                           name="Supervisor_District"
-                          sortKeyPosition="2">
+                          sortKeyPosition="1">
                           <properties>
                             <property
                               containsID="true"
@@ -11857,28 +11945,6 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Day_of_Year]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Computation"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Day_of_Year]"
-                          name="Day_of_Year"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.String"
-                              description="Derived Column Expression"
-                              name="Expression">[DATEPART]("y",(DT_DATE)#{Package\Load Other Dimensions\Load Dim_Date DataFlow\Sort Date.Outputs[Sort Output].Columns[Date_Full]})</property>
-                            <property
-                              containsID="true"
-                              dataType="System.String"
-                              description="Derived Column Friendly Expression"
-                              expressionType="Notify"
-                              name="FriendlyExpression">DATEPART("y",(DT_DATE)Date_Full)</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
                           refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Month_of_Year]"
                           dataType="i4"
                           errorOrTruncationOperation="Computation"
@@ -11944,28 +12010,6 @@
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
                               name="FriendlyExpression">YEAR((DT_DATE)Date_Full)</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Week_of_Year]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Computation"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Week_of_Year]"
-                          name="Week_of_Year"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.String"
-                              description="Derived Column Expression"
-                              name="Expression">[DATEPART]("wk",(DT_DATE)#{Package\Load Other Dimensions\Load Dim_Date DataFlow\Sort Date.Outputs[Sort Output].Columns[Date_Full]})</property>
-                            <property
-                              containsID="true"
-                              dataType="System.String"
-                              description="Derived Column Friendly Expression"
-                              expressionType="Notify"
-                              name="FriendlyExpression">DATEPART("wk",(DT_DATE)Date_Full)</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -12079,256 +12123,6 @@
                           refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                           dataType="i4"
                           lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date"
-                  componentClassID="Microsoft.OLEDBDestination"
-                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-                  description="OLE DB Destination"
-                  name="Dim_Date"
-                  usesDispositions="true"
-                  version="4">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[dbo].[Dim_Date]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">3</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepIdentity">false</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepNulls">false</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                      name="FastLoadMaxInsertCommitSize">2147483647</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Connections[OleDbConnection]"
-                      connectionManagerID="{4DC755D6-CFC9-4E0F-8A82-1B667B6C230C}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-GC7B68S_SQLDEVELOPER.FIRE_INCIDENT 1]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input]"
-                      errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
-                      hasSideEffects="true"
-                      name="OLE DB Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[Date_ID]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="8"
-                          cachedName="Date_ID"
-                          cachedSortKeyPosition="1"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Date_ID]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Sort Date.Outputs[Sort Output].Columns[Date_ID]" />
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[Day_of_Week]"
-                          cachedDataType="i4"
-                          cachedName="Day_of_Week"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Day_of_Week]" />
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[Day_Name]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="15"
-                          cachedName="Day_Name"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Day_Name]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Day_Name]" />
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[Day_of_Month]"
-                          cachedDataType="i4"
-                          cachedName="Day_of_Month"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Month]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Day_of_Month]" />
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[Day_of_Year]"
-                          cachedDataType="i4"
-                          cachedName="Day_of_Year"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Year]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Day_of_Year]" />
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[Month_of_Year]"
-                          cachedDataType="i4"
-                          cachedName="Month_of_Year"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Month_of_Year]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Month_of_Year]" />
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[Month_Name]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="15"
-                          cachedName="Month_Name"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Month_Name]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Month_Name]" />
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[Year]"
-                          cachedDataType="i4"
-                          cachedName="Year"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Year]" />
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[Week_of_Year]"
-                          cachedDataType="i4"
-                          cachedName="Week_of_Year"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Week_of_Year]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Week_of_Year]" />
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[Quarter]"
-                          cachedDataType="i4"
-                          cachedName="Quarter"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Quarter]" />
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[Quarter_Name]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="15"
-                          cachedName="Quarter_Name"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Quarter_Name]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Quarter_Name]" />
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[isWeekend]"
-                          cachedDataType="bool"
-                          cachedName="isWeekend"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[isWeekend]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[isWeekend]" />
-                        <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].Columns[isLeapYear]"
-                          cachedDataType="bool"
-                          cachedName="isLeapYear"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[isLeapYear]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[isLeapYear]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Date_ID]"
-                          codePage="1252"
-                          dataType="str"
-                          length="8"
-                          name="Date_ID" />
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
-                          dataType="i2"
-                          name="Day_of_Week" />
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Day_Name]"
-                          codePage="1252"
-                          dataType="str"
-                          length="15"
-                          name="Day_Name" />
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Month]"
-                          dataType="i2"
-                          name="Day_of_Month" />
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Year]"
-                          dataType="i2"
-                          name="Day_of_Year" />
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Month_of_Year]"
-                          dataType="i2"
-                          name="Month_of_Year" />
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Month_Name]"
-                          codePage="1252"
-                          dataType="str"
-                          length="15"
-                          name="Month_Name" />
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
-                          dataType="i2"
-                          name="Year" />
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[isLeapYear]"
-                          dataType="bool"
-                          name="isLeapYear" />
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
-                          dataType="i2"
-                          name="Quarter" />
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Quarter_Name]"
-                          codePage="1252"
-                          dataType="str"
-                          length="15"
-                          name="Quarter_Name" />
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[Week_of_Year]"
-                          dataType="i2"
-                          name="Week_of_Year" />
-                        <externalMetadataColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[isWeekend]"
-                          dataType="bool"
-                          name="isWeekend" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Outputs[OLE DB Destination Error Output]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -12900,6 +12694,236 @@
                       deleteOutputOnPathDetached="true"
                       name="Multicast Output 5"
                       synchronousInputId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Multicast.Inputs[Multicast Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Dim_Date]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="{4DC755D6-CFC9-4E0F-8A82-1B667B6C230C}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-GC7B68S_SQLDEVELOPER.FIRE_INCIDENT 1]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date_ID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="Date_ID"
+                          cachedSortKeyPosition="1"
+                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_ID]"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Sort Date.Outputs[Sort Output].Columns[Date_ID]" />
+                        <inputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Day_of_Week]"
+                          cachedDataType="i4"
+                          cachedName="Day_of_Week"
+                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Day_of_Week]" />
+                        <inputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Day_Name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="15"
+                          cachedName="Day_Name"
+                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Day_Name]"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Day_Name]" />
+                        <inputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Day_of_Month]"
+                          cachedDataType="i4"
+                          cachedName="Day_of_Month"
+                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Month]"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Day_of_Month]" />
+                        <inputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Month_of_Year]"
+                          cachedDataType="i4"
+                          cachedName="Month_of_Year"
+                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month_of_Year]"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Month_of_Year]" />
+                        <inputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Month_Name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="15"
+                          cachedName="Month_Name"
+                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month_Name]"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Month_Name]" />
+                        <inputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Year]"
+                          cachedDataType="i4"
+                          cachedName="Year"
+                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Year]" />
+                        <inputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Quarter]"
+                          cachedDataType="i4"
+                          cachedName="Quarter"
+                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Quarter]" />
+                        <inputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Quarter_Name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="15"
+                          cachedName="Quarter_Name"
+                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Quarter_Name]"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[Quarter_Name]" />
+                        <inputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[isWeekend]"
+                          cachedDataType="bool"
+                          cachedName="isWeekend"
+                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[isWeekend]"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[isWeekend]" />
+                        <inputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[isLeapYear]"
+                          cachedDataType="bool"
+                          cachedName="isLeapYear"
+                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[isLeapYear]"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output].Columns[isLeapYear]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_ID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="8"
+                          name="Date_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
+                          dataType="i2"
+                          name="Day_of_Week" />
+                        <externalMetadataColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Day_Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="Day_Name" />
+                        <externalMetadataColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Month]"
+                          dataType="i2"
+                          name="Day_of_Month" />
+                        <externalMetadataColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month_of_Year]"
+                          dataType="i2"
+                          name="Month_of_Year" />
+                        <externalMetadataColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month_Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="Month_Name" />
+                        <externalMetadataColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                          dataType="i2"
+                          name="Year" />
+                        <externalMetadataColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[isLeapYear]"
+                          dataType="bool"
+                          name="isLeapYear" />
+                        <externalMetadataColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
+                          dataType="i2"
+                          name="Quarter" />
+                        <externalMetadataColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Quarter_Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="Quarter_Name" />
+                        <externalMetadataColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[isWeekend]"
+                          dataType="bool"
+                          name="isWeekend" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
                       <externalMetadataColumns />
                     </output>
                   </outputs>
@@ -14426,7 +14450,7 @@
                   startId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Group by Close_Dt.Outputs[Aggregate Output 1]" />
                 <path
                   refId="Package\Load Other Dimensions\Load Dim_Date DataFlow.Paths[Derived Column Output]"
-                  endId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date.Inputs[OLE DB Destination Input]"
+                  endId="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   name="Derived Column Output"
                   startId="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns.Outputs[Derived Column Output]" />
                 <path
@@ -19684,19 +19708,10 @@
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Dim_Location.Inputs[OLE DB Destination Input].Columns[City]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="35"
-                          cachedName="City"
-                          cachedSortKeyPosition="1"
-                          externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Dim_Location.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Sort Location.Outputs[Sort Output].Columns[City]" />
-                        <inputColumn
                           refId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Dim_Location.Inputs[OLE DB Destination Input].Columns[Supervisor_District]"
                           cachedDataType="i2"
                           cachedName="Supervisor_District"
-                          cachedSortKeyPosition="2"
+                          cachedSortKeyPosition="1"
                           externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Dim_Location.Inputs[OLE DB Destination Input].ExternalColumns[Supervisor_District]"
                           lineageId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Sort Location.Outputs[Sort Output].Columns[Supervisor_District]" />
                         <inputColumn
@@ -19705,7 +19720,7 @@
                           cachedDataType="str"
                           cachedLength="10"
                           cachedName="zipcode"
-                          cachedSortKeyPosition="3"
+                          cachedSortKeyPosition="2"
                           externalMetadataColumnId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Dim_Location.Inputs[OLE DB Destination Input].ExternalColumns[Zipcode]"
                           lineageId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Sort Location.Outputs[Sort Output].Columns[zipcode]" />
                       </inputColumns>
@@ -19796,13 +19811,6 @@
                       name="Aggregate Input 1">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Group by Location.Inputs[Aggregate Input 1].Columns[City]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="35"
-                          cachedName="City"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Raw_Fact.Outputs[OLE DB Source Output].Columns[City]" />
-                        <inputColumn
                           refId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Group by Location.Inputs[Aggregate Input 1].Columns[Supervisor_District]"
                           cachedDataType="i2"
                           cachedName="Supervisor_District"
@@ -19834,34 +19842,6 @@
                           name="Keys" />
                       </properties>
                       <outputColumns>
-                        <outputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Group by Location.Outputs[Aggregate Output 1].Columns[City]"
-                          codePage="1252"
-                          dataType="str"
-                          length="35"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Group by Location.Outputs[Aggregate Output 1].Columns[City]"
-                          name="City">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the ID of the input column used in the aggregation."
-                              name="AggregationColumnId">#{Package\Load Other Dimensions\Load Dim_Location DataFlow\Raw_Fact.Outputs[OLE DB Source Output].Columns[City]}</property>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the type of aggregation."
-                              name="AggregationType"
-                              typeConverter="AggregationType">0</property>
-                            <property
-                              dataType="System.Int32"
-                              description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                              name="IsBig">1</property>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the string comparison options."
-                              name="AggregationComparisonFlags">0</property>
-                          </properties>
-                        </outputColumn>
                         <outputColumn
                           refId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Group by Location.Outputs[Aggregate Output 1].Columns[Supervisor_District]"
                           dataType="i2"
@@ -21153,24 +21133,6 @@
                       name="Sort Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Sort Location.Inputs[Sort Input].Columns[City]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="35"
-                          cachedName="City"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Group by Location.Outputs[Aggregate Output 1].Columns[City]">
-                          <properties>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the comparison options for character data."
-                              name="NewComparisonFlags">0</property>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">1</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
                           refId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Sort Location.Inputs[Sort Input].Columns[Supervisor_District]"
                           cachedDataType="i2"
                           cachedName="Supervisor_District"
@@ -21183,7 +21145,7 @@
                             <property
                               dataType="System.Int32"
                               description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">2</property>
+                              name="NewSortKeyPosition">1</property>
                           </properties>
                         </inputColumn>
                         <inputColumn
@@ -21201,7 +21163,7 @@
                             <property
                               dataType="System.Int32"
                               description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">3</property>
+                              name="NewSortKeyPosition">2</property>
                           </properties>
                         </inputColumn>
                       </inputColumns>
@@ -21215,27 +21177,11 @@
                       name="Sort Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Sort Location.Outputs[Sort Output].Columns[City]"
-                          codePage="1252"
-                          dataType="str"
-                          length="35"
-                          lineageId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Sort Location.Outputs[Sort Output].Columns[City]"
-                          name="City"
-                          sortKeyPosition="1">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Load Other Dimensions\Load Dim_Location DataFlow\Group by Location.Outputs[Aggregate Output 1].Columns[City]}</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
                           refId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Sort Location.Outputs[Sort Output].Columns[Supervisor_District]"
                           dataType="i2"
                           lineageId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Sort Location.Outputs[Sort Output].Columns[Supervisor_District]"
                           name="Supervisor_District"
-                          sortKeyPosition="2">
+                          sortKeyPosition="1">
                           <properties>
                             <property
                               containsID="true"
@@ -21251,7 +21197,7 @@
                           length="10"
                           lineageId="Package\Load Other Dimensions\Load Dim_Location DataFlow\Sort Location.Outputs[Sort Output].Columns[zipcode]"
                           name="zipcode"
-                          sortKeyPosition="3">
+                          sortKeyPosition="2">
                           <properties>
                             <property
                               containsID="true"
@@ -27825,25 +27771,25 @@
         <NodeLayout
           Size="328,41.6"
           Id="Package\Clean &amp; Create Fire_incident Database\Create Dim, Raw Fact and Fact Table with Constraint"
-          TopLeft="20.0571429909492,102.811764538979" />
+          TopLeft="20.0571429909492,103.767646891082" />
         <NodeLayout
           Size="329.6,41.6"
           Id="Package\Clean &amp; Create Fire_incident Database\Drop and ReCreate Database"
           TopLeft="19.342857275143,30.3999998974449" />
         <EdgeLayout
           Id="Package\Clean &amp; Create Fire_incident Database.PrecedenceConstraints[Constraint]"
-          TopLeft="184.200000133046,72.3999998974449">
+          TopLeft="184.100000133046,71.9999998974449">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,30.4117646415341"
+              EndConnector="0,31.7676469936374"
               Start="0,0"
-              End="0,22.9117646415341">
+              End="0,24.2676469936374">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.9117646415341" />
+                    End="0,24.2676469936374" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -27855,8 +27801,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="369.6,176"
-          Size="369.6,219.2"
+          PanelSize="369.6,199.2"
+          Size="369.6,242.4"
           Id="Package\Clean &amp; Create Fire_incident Database"
           TopLeft="60,127.501400471894" />
         <NodeLayout
@@ -27952,30 +27898,30 @@
           TopLeft="838.402597293115,585.024615848131" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="244.8,346.701400471894">
+          TopLeft="244.8,369.901400471894">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-65.4499989812469,236.472268906223"
+              EndConnector="-65.4499989812469,213.272268906223"
               Start="0,0"
-              End="-65.4499989812469,228.972268906223">
+              End="-65.4499989812469,205.772268906223">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,114.236134453112" />
+                    End="0,102.636134453111" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,114.236134453112"
-                    Point2="0,118.236134453112"
-                    Point3="-4,118.236134453112" />
+                    Point1="0,102.636134453111"
+                    Point2="0,106.636134453111"
+                    Point3="-4,106.636134453111" />
                   <mssgle:LineSegment
-                    End="-61.4499989812469,118.236134453112" />
+                    End="-61.4499989812469,106.636134453111" />
                   <mssgle:CubicBezierSegment
-                    Point1="-61.4499989812469,118.236134453112"
-                    Point2="-65.4499989812469,118.236134453112"
-                    Point3="-65.4499989812469,122.236134453112" />
+                    Point1="-61.4499989812469,106.636134453111"
+                    Point2="-65.4499989812469,106.636134453111"
+                    Point3="-65.4499989812469,110.636134453111" />
                   <mssgle:LineSegment
-                    End="-65.4499989812469,228.972268906223" />
+                    End="-65.4499989812469,205.772268906223" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -28125,6 +28071,28 @@
           Id="Package\Create Raw_Fact\Raw_Fact DataFlow\Create Date ID and Time ID"
           TopLeft="144.615382460447,197.692304746463" />
         <EdgeLayout
+          Id="Package\Create Raw_Fact\Raw_Fact DataFlow.Paths[Flat File Source Output]"
+          TopLeft="242.707689889119,70.8307687951968">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.4769218389805"
+              Start="0,0"
+              End="0,33.9769218389805">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.9769218389805" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Create Raw_Fact\Raw_Fact DataFlow.Paths[Derived Column Output2]"
           TopLeft="250.769228150065,323.138457343212">
           <EdgeLayout.Curve>
@@ -28190,28 +28158,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Create Raw_Fact\Raw_Fact DataFlow.Paths[Flat File Source Output]"
-          TopLeft="242.707689889119,70.8307687951968">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41.4769218389805"
-              Start="0,0"
-              End="0,33.9769218389805">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.9769218389805" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -28257,10 +28203,6 @@
           Size="183.2,41.6"
           Id="Package\Load Fact Table\Load Fact Table\Sort Raw_Fact Station"
           TopLeft="396.192302108957,195.807691230224" />
-        <NodeLayout
-          Size="222.4,41.6"
-          Id="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Location"
-          TopLeft="822.692302108957,402.807691230224" />
         <NodeLayout
           Size="99.2,41.6"
           Id="Package\Load Fact Table\Load Fact Table\Fact"
@@ -28340,28 +28282,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Fact Table\Load Fact Table.Paths[Merge Join Output1]"
-          TopLeft="1045.09230210896,421.838460472455">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="53.0230792041007,0"
-              Start="0,0"
-              End="45.5230792041007,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="45.5230792041007,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Load Fact Table\Load Fact Table.Paths[Merge Join Output]"
           TopLeft="487.692302108957,339.807691230224">
           <EdgeLayout.Curve>
@@ -28387,50 +28307,6 @@
                     Point3="14,34" />
                   <mssgle:LineSegment
                     End="14,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Fact Table\Load Fact Table.Paths[Sort Output3]"
-          TopLeft="934.192302108957,240.807691230224">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,162"
-              Start="0,0"
-              End="0,154.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,154.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Fact Table\Load Fact Table.Paths[Sort Output2]"
-          TopLeft="596.692302108957,422.307691230224">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="226,0"
-              Start="0,0"
-              End="218.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="218.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -28507,11 +28383,93 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="220.8,41.6"
+          Id="Package\Load Fact Table\Load Fact Table\Merge Join Raw_Fact Location"
+          TopLeft="783.571429430526,399.176470238342" />
+        <EdgeLayout
+          Id="Package\Load Fact Table\Load Fact Table.Paths[Sort Output2]"
+          TopLeft="597.092302108957,420.292080734283">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="186.479127321569,0"
+              Start="0,0"
+              End="178.979127321569,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="178.979127321569,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Fact Table\Load Fact Table.Paths[Sort Output3]"
+          TopLeft="934.592302108957,240.407691230224">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-40.6208726784309,158.768779008118"
+              Start="0,0"
+              End="-40.6208726784309,151.268779008118">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75.3843895040588" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,75.3843895040588"
+                    Point2="0,79.3843895040588"
+                    Point3="-4,79.3843895040588" />
+                  <mssgle:LineSegment
+                    End="-36.6208726784309,79.3843895040588" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-36.6208726784309,79.3843895040588"
+                    Point2="-40.6208726784309,79.3843895040588"
+                    Point3="-40.6208726784309,83.3843895040588" />
+                  <mssgle:LineSegment
+                    End="-40.6208726784309,151.268779008118" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Fact Table\Load Fact Table.Paths[Merge Join Output1]"
+          TopLeft="1004.37142943053,420.022849976514">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.7439518825338,0"
+              Start="0,0"
+              End="86.2439518825338,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="86.2439518825338,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Fact Table\Load Fact Table\Raw_Fact">
+    design-time-name="Package\Load Fact Table\Load Fact Table\Fact">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -28537,7 +28495,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Fact Table\Load Fact Table\Fact">
+    design-time-name="Package\Load Fact Table\Load Fact Table\Raw_Fact">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -28566,7 +28524,7 @@
     design-time-name="Package\Load Other Dimensions\Load Dim_Action DataFlow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="131.2,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Action DataFlow\Sort Action"
@@ -28602,7 +28560,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28624,7 +28584,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28646,7 +28608,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -28682,23 +28646,19 @@
     design-time-name="Package\Load Other Dimensions\Load Dim_Date DataFlow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="180,41.6"
-          Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Sort Date"
-          TopLeft="483.500000059605,421.899999850988" />
+          Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Union All"
+          TopLeft="483.500000059605,320.299999850988" />
         <NodeLayout
           Size="180,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Group by Close_Dt"
           TopLeft="1.50000005960464,218.699999850988" />
         <NodeLayout
-          Size="180,41.6"
-          Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date"
-          TopLeft="483.500000059605,625.099999850988" />
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Union All"
-          TopLeft="483.500000059605,320.299999850988" />
+          Size="170.4,41.6"
+          Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination"
+          TopLeft="489.285715327275,602.964705437278" />
         <NodeLayout
           Size="180,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Group by Arrival_Dt"
@@ -28709,20 +28669,24 @@
           TopLeft="483.500000059605,117.099999850988" />
         <NodeLayout
           Size="180,41.6"
-          Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Group by Alarm_Dt"
-          TopLeft="483.500000059605,218.699999850988" />
+          Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Raw_Fact"
+          TopLeft="483.500000059605,15.4999998509883" />
         <NodeLayout
           Size="180,41.6"
-          Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns"
-          TopLeft="483.500000059605,523.499999850988" />
+          Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Group by Alarm_Dt"
+          TopLeft="483.500000059605,218.699999850988" />
         <NodeLayout
           Size="180,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Group by Incident_Dt"
           TopLeft="724.500000059605,218.699999850988" />
         <NodeLayout
           Size="180,41.6"
-          Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Raw_Fact"
-          TopLeft="483.500000059605,15.4999998509883" />
+          Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Create Date Columns"
+          TopLeft="483.500000059605,523.499999850988" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Load Other Dimensions\Load Dim_Date DataFlow\Sort Date"
+          TopLeft="483.500000059605,421.899999850988" />
         <EdgeLayout
           Id="Package\Load Other Dimensions\Load Dim_Date DataFlow.Paths[Union All Output 1]"
           TopLeft="573.500000059605,361.899999850988">
@@ -28742,7 +28706,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28764,7 +28730,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28786,7 +28754,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28820,7 +28790,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28854,7 +28826,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28888,7 +28862,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28922,29 +28898,33 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Other Dimensions\Load Dim_Date DataFlow.Paths[Derived Column Output]"
-          TopLeft="573.500000059605,565.099999850988">
+          TopLeft="573.99285769344,565.099999850988">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,37.8647055862895"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,30.3647055862895">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,30.3647055862895" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28978,7 +28958,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29012,7 +28994,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29046,7 +29030,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29080,14 +29066,16 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Other Dimensions\Load Dim_Date DataFlow\Dim_Date">
+    design-time-name="Package\Load Other Dimensions\Load Dim_Date DataFlow\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -29116,7 +29104,7 @@
     design-time-name="Package\Load Other Dimensions\Load Dim_Heat_Source DateFlow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="160.8,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Heat_Source DateFlow\Sort Heat_Source"
@@ -29152,7 +29140,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29174,7 +29164,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29196,7 +29188,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -29232,7 +29226,7 @@
     design-time-name="Package\Load Other Dimensions\Load Dim_Ignition_Cause DataFlow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Ignition_Cause DataFlow\Sort Ignition_Cause"
@@ -29268,7 +29262,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29290,7 +29286,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29312,7 +29310,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -29348,7 +29348,7 @@
     design-time-name="Package\Load Other Dimensions\Load Dim_Ignition_Factor DateFlow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="120,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Ignition_Factor DateFlow\Multicast"
@@ -29408,7 +29408,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29442,7 +29444,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29464,7 +29468,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29486,7 +29492,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29508,7 +29516,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29542,7 +29552,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29576,7 +29588,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -29612,13 +29626,13 @@
     design-time-name="Package\Load Other Dimensions\Load Dim_Location DataFlow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="124.8,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Location DataFlow\Raw_Fact"
           TopLeft="402.166661053896,46.1666660606861" />
         <NodeLayout
-          Size="164.8,41.6"
+          Size="164,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Location DataFlow\Group by Location"
           TopLeft="382.166661053896,148.166666060686" />
         <NodeLayout
@@ -29626,73 +29640,79 @@
           Id="Package\Load Other Dimensions\Load Dim_Location DataFlow\Dim_Location"
           TopLeft="393.166661053896,352.166666060686" />
         <NodeLayout
-          Size="140.8,41.6"
+          Size="140,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Location DataFlow\Sort Location"
           TopLeft="394.166661053896,250.166666060686" />
         <EdgeLayout
-          Id="Package\Load Other Dimensions\Load Dim_Location DataFlow.Paths[Sort Output]"
-          TopLeft="464.666661053896,292.166666060686">
+          Id="Package\Load Other Dimensions\Load Dim_Location DataFlow.Paths[Aggregate Output 1]"
+          TopLeft="464.166661053896,189.766666060686">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,60.4"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Other Dimensions\Load Dim_Location DataFlow.Paths[Sort Output]"
+          TopLeft="464.466661053896,291.766666060686">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.4"
+              Start="0,0"
+              End="0,52.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Other Dimensions\Load Dim_Location DataFlow.Paths[OLE DB Source Output]"
-          TopLeft="464.666661053896,88.1666660606861">
+          TopLeft="464.366661053896,87.7666660606861">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,60.3999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.8999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.8999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Other Dimensions\Load Dim_Location DataFlow.Paths[Aggregate Output 1]"
-          TopLeft="464.666661053896,190.166666060686">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -29728,7 +29748,7 @@
     design-time-name="Package\Load Other Dimensions\Load Dim_Situation DataFlow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="143.2,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Situation DataFlow\Sort Situation"
@@ -29764,7 +29784,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29786,7 +29808,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29808,7 +29832,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -29844,7 +29870,7 @@
     design-time-name="Package\Load Other Dimensions\Load Dim_Station DataFlow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="124.8,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Station DataFlow\Raw_Fact"
@@ -29880,7 +29906,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29902,7 +29930,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29924,7 +29954,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -29960,7 +29992,7 @@
     design-time-name="Package\Load Other Dimensions\Load Dim_Structure DateFlow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="144.8,41.6"
           Id="Package\Load Other Dimensions\Load Dim_Structure DateFlow\Sort Structure"
@@ -29996,7 +30028,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -30018,7 +30052,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -30040,7 +30076,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -30076,7 +30114,7 @@
     design-time-name="Package\Load Other Dimensions\Load Din_Property DataFlow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="140.8,41.6"
           Id="Package\Load Other Dimensions\Load Din_Property DataFlow\Sort property"
@@ -30112,7 +30150,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -30134,7 +30174,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -30156,7 +30198,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

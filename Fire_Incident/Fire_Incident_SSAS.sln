@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Fire_Incident_SSAS", "Fire_Incident_SSAS\Fire_Incident_SSAS.dwproj", "{7B045966-F668-4C42-9C20-5EEFCCBEFEB3}"
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "SSAS", "Fire_Incident_SSAS\SSAS.dwproj", "{7B045966-F668-4C42-9C20-5EEFCCBEFEB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
